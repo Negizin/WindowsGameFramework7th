@@ -1,0 +1,275 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="WindowsGameFramework">
+      <UniqueIdentifier>{0669e0c5-1aa8-409f-a80c-0d74ebf5afaa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets">
+      <UniqueIdentifier>{5cc02f95-1b5a-4ebe-b808-83fe2fd5edfa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\csv">
+      <UniqueIdentifier>{99ac180f-7ca7-408d-b074-63524b73d68d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\csv\ApplicationData">
+      <UniqueIdentifier>{50137ebf-e73a-476a-a608-76a7a597617e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WindowsGameFramework\0_BaseSystem">
+      <UniqueIdentifier>{a5b8b758-3232-42a5-b7ca-a724ee5906bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WindowsGameFramework\0_BaseSystem\Public">
+      <UniqueIdentifier>{9367a52c-3893-4bf6-a1d0-27538beb7546}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WindowsGameFramework\0_BaseSystem\Public\0_Common">
+      <UniqueIdentifier>{54c1b8ef-aba9-4adf-982d-720067090f7d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WindowsGameFramework\0_BaseSystem\Public\5_Audio">
+      <UniqueIdentifier>{87d3beeb-d183-407a-9d46-266daaaafc3c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WindowsGameFramework\0_BaseSystem\Public\6_Timer">
+      <UniqueIdentifier>{27093c13-4b05-4789-a184-2fc8466ad8f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WindowsGameFramework\0_BaseSystem\Public\7_Scene">
+      <UniqueIdentifier>{d571fab8-699d-4836-afde-10d4339aba05}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WindowsGameFramework\0_BaseSystem\Public\1_WindowGameManager">
+      <UniqueIdentifier>{0277add7-fa4e-4525-b094-d14a526d0cf1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WindowsGameFramework\0_BaseSystem\Public\2_MainWindow">
+      <UniqueIdentifier>{f959d3fc-d695-4e38-9883-ecdf567ac7ba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WindowsGameFramework\0_BaseSystem\Public\3_Input">
+      <UniqueIdentifier>{aa7c8a99-976a-48da-9af2-c0fed1a92d45}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WindowsGameFramework\0_BaseSystem\Public\4_Rendering">
+      <UniqueIdentifier>{17f1ba79-a308-4b89-bbbd-5253782497fc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WindowsGameFramework\0_BaseSystem\Private">
+      <UniqueIdentifier>{e46ec53c-4ff2-4c57-b5bf-9c2d1c359f0f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WindowsGameFramework\0_BaseSystem\Private\0_Common">
+      <UniqueIdentifier>{07e6c1b7-53f4-47b3-ba30-c3c7defcbc17}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WindowsGameFramework\0_BaseSystem\Private\1_WindowsGameManager">
+      <UniqueIdentifier>{f1d1417f-278a-4946-a519-36adb941c3b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WindowsGameFramework\0_BaseSystem\Private\2_MainWindow">
+      <UniqueIdentifier>{2fb5b524-47e1-4716-a23c-181773deb2dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WindowsGameFramework\0_BaseSystem\Private\3_Input">
+      <UniqueIdentifier>{6f08462c-f930-44d0-b539-2d88e9011756}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WindowsGameFramework\0_BaseSystem\Private\5_Audio">
+      <UniqueIdentifier>{4a210ebd-7211-4715-b6f0-250a1151c0ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WindowsGameFramework\0_BaseSystem\Private\4_Rendering">
+      <UniqueIdentifier>{631c7683-7808-4ee6-ab58-4acc0415a93f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WindowsGameFramework\0_BaseSystem\Private\6_Timer">
+      <UniqueIdentifier>{70da2c85-9e68-4339-803d-2e13289938db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WindowsGameFramework\0_BaseSystem\Private\7_Scene">
+      <UniqueIdentifier>{ec7c20fb-9ce5-4f3f-8297-97773d6acad7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WindowsGameFramework\1_ObjectManager">
+      <UniqueIdentifier>{7eef5efc-af13-4006-aa33-e16d6934b129}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WindowsGameFramework\2_GameObjectClasses">
+      <UniqueIdentifier>{4966489e-dca0-4dce-b4bc-84220dcccd04}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WindowsGameFramework\2_GameObjectClasses\2D">
+      <UniqueIdentifier>{3a3763d3-83c7-4859-837d-835d299738d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WindowsGameFramework\2_GameObjectClasses\3D">
+      <UniqueIdentifier>{3dc6f407-091f-4755-92b2-9c20702cf5fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WindowsGameFramework\3_ComponentClasses">
+      <UniqueIdentifier>{00fb18b2-ddb8-4245-a295-940433673ed5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WindowsGameFramework\3_ComponentClasses\Transform">
+      <UniqueIdentifier>{90536cd8-9f0b-4e62-9c6d-9f9dec1c5f85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WindowsGameFramework\3_ComponentClasses\Collider">
+      <UniqueIdentifier>{c2774889-3a92-4c9f-a903-b3f2f75d0267}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WindowsGameFramework\3_ComponentClasses\Renderer">
+      <UniqueIdentifier>{71aec67b-7a02-4d39-bace-d6e77ec67090}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WindowsGameFramework\3_ComponentClasses\Collider\2D">
+      <UniqueIdentifier>{26a67e5c-7d46-463e-bdda-287d8e348d3e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WindowsGameFramework\3_ComponentClasses\Collider\3D">
+      <UniqueIdentifier>{43a6e185-f883-46e3-9f57-709bda7ed85c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WindowsGameFramework\3_ComponentClasses\Renderer\Sprite">
+      <UniqueIdentifier>{1bbe1715-4ac0-4500-b5f1-fd7857080bcd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WindowsGameFramework\9_Utilities">
+      <UniqueIdentifier>{0dbc7df2-5174-4197-9e49-f4cbe8a70e23}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WindowsGameFramework\9_Utilities\Math">
+      <UniqueIdentifier>{7bc8d5f2-6d7f-4d42-a4c9-cc2cea722cd8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\csv\ApplicationData\windowData.csv">
+      <Filter>Assets\csv\ApplicationData</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Framework\BaseSystem\Public\Common\Common.h">
+      <Filter>WindowsGameFramework\0_BaseSystem\Public\0_Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\BaseSystem\Private\Common\DebugNew.h">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\0_Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\BaseSystem\Private\Common\SafeFunction.h">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\0_Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\BaseSystem\Private\Common\TCHARString.h">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\0_Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\BaseSystem\Private\MainWindow\MainWindowSystem.h">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\2_MainWindow</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\BaseSystem\Public\MainWindow\MainWindow.h">
+      <Filter>WindowsGameFramework\0_BaseSystem\Public\2_MainWindow</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\BaseSystem\Private\MainWindow\MainWindowNS.h">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\2_MainWindow</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\BaseSystem\Private\Input\KeyboardData.h">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\3_Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\BaseSystem\Private\Input\XInputControllerData.h">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\3_Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\BaseSystem\Private\Input\InputSystem.h">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\3_Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\BaseSystem\Public\Input\Input.h">
+      <Filter>WindowsGameFramework\0_BaseSystem\Public\3_Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\BaseSystem\Private\Input\InputSystemNS.h">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\3_Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\BaseSystem\Private\Timer\TimerSystem.h">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\6_Timer</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\BaseSystem\Private\Timer\TimerSystemNS.h">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\6_Timer</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\BaseSystem\Public\Timer\Timer.h">
+      <Filter>WindowsGameFramework\0_BaseSystem\Public\6_Timer</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\BaseSystem\Private\WindowsGameTemplate\WindowsGame.h">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\1_WindowsGameManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\ComponentClasses\Transform\Transform.h">
+      <Filter>WindowsGameFramework\3_ComponentClasses\Transform</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\ComponentClasses\Collider\Collider.h">
+      <Filter>WindowsGameFramework\3_ComponentClasses\Collider</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\ComponentClasses\Renderer\Renderer.h">
+      <Filter>WindowsGameFramework\3_ComponentClasses\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\ComponentClasses\Component.h">
+      <Filter>WindowsGameFramework\3_ComponentClasses</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\GameObjectClasses\GameObject.h">
+      <Filter>WindowsGameFramework\2_GameObjectClasses</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\ObjectManager\ObjectManager.h">
+      <Filter>WindowsGameFramework\1_ObjectManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\BaseSystem\Private\Scene\SceneManager.h">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\7_Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\BaseSystem\Public\Scene\BaseScene.h">
+      <Filter>WindowsGameFramework\0_BaseSystem\Public\7_Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\ComponentClasses\Collider\3D\BoxCollider.h">
+      <Filter>WindowsGameFramework\3_ComponentClasses\Collider\3D</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\ComponentClasses\Collider\3D\SphereCollider.h">
+      <Filter>WindowsGameFramework\3_ComponentClasses\Collider\3D</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\BaseSystem\Private\Scene\LoadingScene.h">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\7_Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\GameObjectClasses\2D\Sprite2D.h">
+      <Filter>WindowsGameFramework\2_GameObjectClasses\2D</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\GameObjectClasses\2D\FadeSprite.h">
+      <Filter>WindowsGameFramework\2_GameObjectClasses\2D</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\Utilities\Math\Math.h">
+      <Filter>WindowsGameFramework\9_Utilities\Math</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Framework\BaseSystem\Private\MainWindow\MainWindowSystem.cpp">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\2_MainWindow</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\BaseSystem\Public\MainWindow\MainWindow.cpp">
+      <Filter>WindowsGameFramework\0_BaseSystem\Public\2_MainWindow</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\BaseSystem\Private\Input\InputSystem.cpp">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\3_Input</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\BaseSystem\Public\Input\Input.cpp">
+      <Filter>WindowsGameFramework\0_BaseSystem\Public\3_Input</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\BaseSystem\Private\Timer\TimerSystem.cpp">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\6_Timer</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\BaseSystem\Public\Timer\Timer.cpp">
+      <Filter>WindowsGameFramework\0_BaseSystem\Public\6_Timer</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\BaseSystem\Private\WindowsGameTemplate\WindowsGame.cpp">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\1_WindowsGameManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\BaseSystem\Private\WindowsGameTemplate\WinMain.cpp">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\1_WindowsGameManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\ComponentClasses\Collider\Collider.cpp">
+      <Filter>WindowsGameFramework\3_ComponentClasses\Collider</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\ComponentClasses\Renderer\Renderer.cpp">
+      <Filter>WindowsGameFramework\3_ComponentClasses\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\ComponentClasses\Component.cpp">
+      <Filter>WindowsGameFramework\3_ComponentClasses</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\GameObjectClasses\GameObject.cpp">
+      <Filter>WindowsGameFramework\2_GameObjectClasses</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\ComponentClasses\Transform\Transform.cpp">
+      <Filter>WindowsGameFramework\3_ComponentClasses\Transform</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\ObjectManager\ObjectManager.cpp">
+      <Filter>WindowsGameFramework\1_ObjectManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\BaseSystem\Private\Scene\SceneManager.cpp">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\7_Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\BaseSystem\Public\Scene\BaseScene.cpp">
+      <Filter>WindowsGameFramework\0_BaseSystem\Public\7_Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\ComponentClasses\Collider\3D\BoxCollider.cpp">
+      <Filter>WindowsGameFramework\3_ComponentClasses\Collider\3D</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\ComponentClasses\Collider\3D\SphereCollider.cpp">
+      <Filter>WindowsGameFramework\3_ComponentClasses\Collider\3D</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\BaseSystem\Private\Scene\LoadingScene.cpp">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\7_Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\GameObjectClasses\2D\Sprite2D.cpp">
+      <Filter>WindowsGameFramework\2_GameObjectClasses\2D</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\GameObjectClasses\2D\FadeSprite.cpp">
+      <Filter>WindowsGameFramework\2_GameObjectClasses\2D</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
