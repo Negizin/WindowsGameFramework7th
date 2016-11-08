@@ -112,6 +112,9 @@
     <Filter Include="WindowsGameFramework\9_Utilities\Random">
       <UniqueIdentifier>{1ab040fd-436a-48d4-9b24-87aa2bd5be68}</UniqueIdentifier>
     </Filter>
+    <Filter Include="WindowsGameFramework\0_BaseSystem\Private\8_Debug">
+      <UniqueIdentifier>{2055a90b-d07d-43dd-b7e5-cbfaf2a09256}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\csv\ApplicationData\windowData.csv">
@@ -212,6 +215,12 @@
     <ClInclude Include="Framework\BaseSystem\Private\Scene\LoadScene.h">
       <Filter>WindowsGameFramework\0_BaseSystem\Private\7_Scene</Filter>
     </ClInclude>
+    <ClInclude Include="Framework\BaseSystem\Private\DebugSystem\ConsoleWindow.h">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\8_Debug</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\BaseSystem\Private\Common\Console.h">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\0_Common</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Framework\BaseSystem\Private\MainWindow\MainWindowSystem.cpp">
@@ -279,6 +288,9 @@
     </ClCompile>
     <ClCompile Include="Framework\BaseSystem\Private\Scene\LoadScene.cpp">
       <Filter>WindowsGameFramework\0_BaseSystem\Private\7_Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\BaseSystem\Private\DebugSystem\ConsoleWindow.cpp">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\8_Debug</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

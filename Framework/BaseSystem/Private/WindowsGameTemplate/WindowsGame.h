@@ -8,6 +8,7 @@
 #pragma once
 #include	"../../../BaseSystem/Public/Common/Common.h"
 #include	"../../../BaseSystem/Private/MainWindow/MainWindowSystem.h"
+#include	"../../../BaseSystem/Private/DebugSystem/ConsoleWindow.h"
 #include	"../../../BaseSystem/Private/Input/InputSystem.h"
 #include	"../../../BaseSystem/Private/Timer/TimerSystem.h"
 

@@ -151,9 +151,11 @@
     <None Include="Assets\csv\ApplicationData\windowData.csv" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Framework\BaseSystem\Private\Common\Console.h" />
     <ClInclude Include="Framework\BaseSystem\Private\Common\DebugNew.h" />
     <ClInclude Include="Framework\BaseSystem\Private\Common\SafeFunction.h" />
     <ClInclude Include="Framework\BaseSystem\Private\Common\TCHARString.h" />
+    <ClInclude Include="Framework\BaseSystem\Private\DebugSystem\ConsoleWindow.h" />
     <ClInclude Include="Framework\BaseSystem\Private\Input\InputSystem.h" />
     <ClInclude Include="Framework\BaseSystem\Private\Input\InputSystemNS.h" />
     <ClInclude Include="Framework\BaseSystem\Private\Input\KeyboardData.h" />
@@ -184,6 +186,7 @@
     <ClInclude Include="Framework\Utilities\Random\Random.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Framework\BaseSystem\Private\DebugSystem\ConsoleWindow.cpp" />
     <ClCompile Include="Framework\BaseSystem\Private\Input\InputSystem.cpp" />
     <ClCompile Include="Framework\BaseSystem\Private\MainWindow\MainWindowSystem.cpp" />
     <ClCompile Include="Framework\BaseSystem\Private\Scene\LoadScene.cpp" />
