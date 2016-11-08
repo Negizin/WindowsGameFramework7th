@@ -41,7 +41,7 @@ void LoadScene::Initialize() {
 void LoadScene::Initialize(BaseScene * _pNextScene) {
 	m_pNextScene = _pNextScene;
 	std::thread	_loadThread(&LoadScene::Loading, this);	//別スレッドで遷移先のシーンを初期化する
-	_loadThread.detach;
+	_loadThread.detach();
 }
 
 /*! =====================================================================================
