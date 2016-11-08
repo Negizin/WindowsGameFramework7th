@@ -31,3 +31,6 @@
 *.opendb
 *.suo
 *.db
+
+*.suo
+*.db
