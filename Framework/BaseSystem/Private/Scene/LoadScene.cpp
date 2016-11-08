@@ -103,4 +103,3 @@ bool LoadScene::CheckSceneTransition() {
 		return false;	//ローディング完了
 	}
 }
-
