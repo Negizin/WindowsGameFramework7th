@@ -181,6 +181,7 @@
     <ClInclude Include="Framework\GameObjectClasses\GameObject.h" />
     <ClInclude Include="Framework\ObjectManager\ObjectManager.h" />
     <ClInclude Include="Framework\Utilities\Math\Math.h" />
+    <ClInclude Include="Framework\Utilities\Random\Random.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Framework\BaseSystem\Private\Input\InputSystem.cpp" />
@@ -204,6 +205,7 @@
     <ClCompile Include="Framework\GameObjectClasses\2D\Sprite2D.cpp" />
     <ClCompile Include="Framework\GameObjectClasses\GameObject.cpp" />
     <ClCompile Include="Framework\ObjectManager\ObjectManager.cpp" />
+    <ClCompile Include="Framework\Utilities\Random\Random.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
