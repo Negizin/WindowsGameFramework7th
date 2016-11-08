@@ -160,7 +160,7 @@
     <ClInclude Include="Framework\BaseSystem\Private\Input\XInputControllerData.h" />
     <ClInclude Include="Framework\BaseSystem\Private\MainWindow\MainWindowNS.h" />
     <ClInclude Include="Framework\BaseSystem\Private\MainWindow\MainWindowSystem.h" />
-    <ClInclude Include="Framework\BaseSystem\Private\Scene\LoadingScene.h" />
+    <ClInclude Include="Framework\BaseSystem\Private\Scene\LoadScene.h" />
     <ClInclude Include="Framework\BaseSystem\Private\Scene\SceneManager.h" />
     <ClInclude Include="Framework\BaseSystem\Private\Timer\TimerSystem.h" />
     <ClInclude Include="Framework\BaseSystem\Private\Timer\TimerSystemNS.h" />
@@ -186,7 +186,7 @@
   <ItemGroup>
     <ClCompile Include="Framework\BaseSystem\Private\Input\InputSystem.cpp" />
     <ClCompile Include="Framework\BaseSystem\Private\MainWindow\MainWindowSystem.cpp" />
-    <ClCompile Include="Framework\BaseSystem\Private\Scene\LoadingScene.cpp" />
+    <ClCompile Include="Framework\BaseSystem\Private\Scene\LoadScene.cpp" />
     <ClCompile Include="Framework\BaseSystem\Private\Scene\SceneManager.cpp" />
     <ClCompile Include="Framework\BaseSystem\Private\Timer\TimerSystem.cpp" />
     <ClCompile Include="Framework\BaseSystem\Private\WindowsGameTemplate\WindowsGame.cpp" />

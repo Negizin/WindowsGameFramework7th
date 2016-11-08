@@ -14,7 +14,7 @@
 
 #pragma once
 #include	"../../../ObjectManager/ObjectManager.h"
-class FadeSprite;
+#include	"../../../GameObjectClasses/2D/FadeSprite.h"
 
 class BaseScene {
 public:
@@ -28,8 +28,8 @@ public:
 protected:
 	ObjectManager	m_objectManager;	//オブジェクト管理クラス
 
-	FadeSprite*		m_pFadeSprite;	//フェードに使用するスプライトオブジェクト
-	int				m_nextSceneID;	//シーン遷移ID
-	virtual	bool	CheckSceneTransition();
+	FadeSprite*		m_pFadeSprite;		//フェードに使用するスプライトオブジェクト
+	int				m_nextSceneID;		//シーン遷移ID
+	virtual	bool	CheckSceneTransition();	
 };
 

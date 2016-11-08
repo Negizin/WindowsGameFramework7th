@@ -6,6 +6,7 @@
 ====================================================================================== */
 #pragma once
 class BaseScene;
+class LoadScene;
 
 class SceneManager {
 public:
@@ -17,12 +18,12 @@ public:
 	void	RenderScene();	//描画処理
 
 private:
-	BaseScene*	m_pNowScene;		//現在実行中のシーン
-	BaseScene*	m_pNextScene;		//シーン遷移先受付用スタック
+	BaseScene*	m_pNowScene;	//現在実行中のシーン
+	BaseScene*	m_pNextScene;	//シーン遷移先受付用スタック
 
 
 	bool		m_bNowLoading;	//シーン遷移中・ローディング中フラグ
-	BaseScene*	m_pLoadingScene;	//ローディングシーン
+	LoadScene*	m_pLoadScene;	//ローディングシーン
 
 	void	NextSceneLaunch();	//遷移先シーンの立ち上げ
 };

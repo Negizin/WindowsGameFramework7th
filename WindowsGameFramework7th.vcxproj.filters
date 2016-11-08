@@ -197,9 +197,6 @@
     <ClInclude Include="Framework\ComponentClasses\Collider\3D\SphereCollider.h">
       <Filter>WindowsGameFramework\3_ComponentClasses\Collider\3D</Filter>
     </ClInclude>
-    <ClInclude Include="Framework\BaseSystem\Private\Scene\LoadingScene.h">
-      <Filter>WindowsGameFramework\0_BaseSystem\Private\7_Scene</Filter>
-    </ClInclude>
     <ClInclude Include="Framework\GameObjectClasses\2D\Sprite2D.h">
       <Filter>WindowsGameFramework\2_GameObjectClasses\2D</Filter>
     </ClInclude>
@@ -211,6 +208,9 @@
     </ClInclude>
     <ClInclude Include="Framework\Utilities\Random\Random.h">
       <Filter>WindowsGameFramework\9_Utilities\Random</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\BaseSystem\Private\Scene\LoadScene.h">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\7_Scene</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -268,9 +268,6 @@
     <ClCompile Include="Framework\ComponentClasses\Collider\3D\SphereCollider.cpp">
       <Filter>WindowsGameFramework\3_ComponentClasses\Collider\3D</Filter>
     </ClCompile>
-    <ClCompile Include="Framework\BaseSystem\Private\Scene\LoadingScene.cpp">
-      <Filter>WindowsGameFramework\0_BaseSystem\Private\7_Scene</Filter>
-    </ClCompile>
     <ClCompile Include="Framework\GameObjectClasses\2D\Sprite2D.cpp">
       <Filter>WindowsGameFramework\2_GameObjectClasses\2D</Filter>
     </ClCompile>
@@ -279,6 +276,9 @@
     </ClCompile>
     <ClCompile Include="Framework\Utilities\Random\Random.cpp">
       <Filter>WindowsGameFramework\9_Utilities\Random</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\BaseSystem\Private\Scene\LoadScene.cpp">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\7_Scene</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

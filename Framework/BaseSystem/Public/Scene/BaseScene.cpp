@@ -29,14 +29,14 @@ BaseScene * BaseScene::Update() {
 	m_objectManager.Update();
 
 	//シーン遷移判定
-	if (CheckSceneTransition()) {
+	if (CheckSceneTransition() == true) {
 		m_pFadeSprite->StartFadeOut();	//フェードアウト開始
 	}
 	
 	//シーン遷移中
 	if (m_nextSceneID != 0) {
 		//フェードアウトが完了
-		if (m_pFadeSprite->GetFadingState()) {
+		if (m_pFadeSprite->GetFadingState() == false) {
 			//遷移先シーンのポインタを返す
 			switch (m_nextSceneID) {
 				case	1:	return this;
@@ -72,7 +72,7 @@ bool BaseScene::CheckSceneTransition() {
 	/* 実装例：継承先で条件式を実装してください */
 
 	//シーン開始・終了時のフェード中はシーン遷移を受け付けない
-	if (m_pFadeSprite->GetFadingState() == true) {
+	if (m_pFadeSprite->GetFadingState() == true || m_nextSceneID != 0) {
 		return false;
 	}
 

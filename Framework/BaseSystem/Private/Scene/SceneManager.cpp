@@ -1,6 +1,6 @@
 #include	"SceneManager.h"
 #include	"../../../BaseSystem/Public/Common/Common.h"
-#include	"LoadingScene.h"
+#include	"LoadScene.h"
 //#include	"TitleScene.h"
 //#include	"..//Game/GameScene.h"
 #include	<thread>
@@ -11,6 +11,7 @@
 ====================================================================================== */
 SceneManager::SceneManager() {
 	m_bNowLoading = true;
+	m_pLoadScene = new LoadScene(&m_bNowLoading);
 }
 
 /*! =====================================================================================
@@ -19,7 +20,7 @@ SceneManager::SceneManager() {
 ====================================================================================== */
 SceneManager::~SceneManager() {
 	SafeDelete(m_pNowScene);
-	SafeDelete(m_pLoadingScene);
+	SafeDelete(m_pLoadScene);
 }
 
 /*! =====================================================================================
@@ -28,7 +29,7 @@ SceneManager::~SceneManager() {
 @return void
 ====================================================================================== */
 void	SceneManager::Initialize() {
-	//m_pNowScene = new GameScene();
+	
 }
 
 /*! =====================================================================================
@@ -43,9 +44,10 @@ void	SceneManager::Update() {
 	}
 
 	//シーンの更新処理
+	//シーン遷移条件を満たされたとき、遷移先シーンのポインタが返される（遷移なしの場合はシーンのthisポインタが返される）
 	m_pNextScene = m_pNowScene->Update();
 
-	//シーン遷移条件を満たされたとき、遷移先シーンのポインタが返る（遷移なしの場合はシーンのthisポインタが返る）
+	//シーン遷移あり
 	if (m_pNextScene != m_pNowScene) {
 
 		//ローディングの完了によるシーン遷移の場合
@@ -55,9 +57,9 @@ void	SceneManager::Update() {
 		}
 		//通常のゲームシーンから別のシーンへ遷移する場合
 		else {
-			m_bNowLoading = true;				//ローディングON
-			//m_pLoadingScene->Initialize(m_pNextScene);	//遷移先シーンのポインタをローディングシーンに渡す
-			m_pNextScene = m_pNowScene = m_pLoadingScene;	//ローディング用シーンをセット
+			m_bNowLoading = true;						//ローディングON
+			m_pLoadScene->Initialize(m_pNextScene);		//遷移先シーンのポインタをローディングシーンに渡す
+			m_pNextScene = m_pNowScene = m_pLoadScene;	//ローディング用シーンをセット
 		}
 	}
 
