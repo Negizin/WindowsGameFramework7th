@@ -18,6 +18,15 @@ class RenderSystem :public NameObject {
 public:
 	RenderSystem();
 	virtual ~RenderSystem();
+
+	/*! =====================================================================================
+	@brief	初期化処理（デバイス生成）
+	@param	HWND 
+	@return	bool
+	====================================================================================== */
+	bool	Initialize(HWND _hWnd);
+
+
 	virtual bool CallRender(DeviceContext *pDc);
 
 	//RenderFlowとDrawQueueの構造体
@@ -50,6 +59,11 @@ public:
 
 
 protected:
+	//デバイス
+	DX11Device*		m_pDevice;
+
+	//レンダリング・システムリソース
+
 	//std::vector<TsLight*>		m_lights;
 	std::vector<Texture*>		m_shaderResourceList;
 	std::vector<DrawQueue*>		m_drawque;

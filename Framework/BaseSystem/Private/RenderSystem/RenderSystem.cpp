@@ -5,12 +5,35 @@
 #include	"ShaderResource\Texture\DepthStencil\DepthStencil.h"
 #include	"ResourceManager\ResourceManager.h"
 
-RenderSystem::RenderSystem() {
+#include	"../../Public/MainWindow/MainWindow.h"
+
+/*! =====================================================================================
+@brief	コンストラクタ
+====================================================================================== */
+RenderSystem::RenderSystem() :
+	m_pDevice(nullptr) {
 
 }
 
+/*! =====================================================================================
+@brief	デストラクタ
+====================================================================================== */
 RenderSystem::~RenderSystem() {
+	SafeDelete(m_pDevice);
+}
 
+/*! =====================================================================================
+@brief	初期化処理（デバイス生成）
+@return	bool
+====================================================================================== */
+bool RenderSystem::Initialize(HWND _hWnd) {
+	m_pDevice = new DX11Device();
+	bool _bResult = m_pDevice->CreateDevice(_hWnd, MainWindow::GetWindowWidth(), MainWindow::GetWindowHeight());
+	if (_bResult == false) {
+		MessageBox(NULL, _T("Initialize() is fail"), _T("Error:RenderSystem.cpp"), MB_OK);
+		return false;
+	}
+	return true;
 }
 
 bool RenderSystem::CallRender(DeviceContext *pDC) {
