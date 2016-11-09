@@ -3,7 +3,7 @@
 #include	"DirectXTex\DXTex.h"
 #include	"ShaderResource\Texture\RenderTarget\RenderTarget.h"
 #include	"ShaderResource\Texture\DepthStencil\DepthStencil.h"
-#include	"ResourceManager\ResouceManager.h"
+#include	"ResourceManager\ResourceManager.h"
 
 RenderSystem::RenderSystem() {
 
