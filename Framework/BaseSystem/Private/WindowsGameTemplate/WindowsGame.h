@@ -10,6 +10,7 @@
 #include	"../../../BaseSystem/Private/MainWindow/MainWindowSystem.h"
 #include	"../../../BaseSystem/Private/DebugSystem/ConsoleWindow.h"
 #include	"../../../BaseSystem/Private/Input/InputSystem.h"
+#include	"../../../BaseSystem/Private/RenderSystem/RenderSystem.h"
 #include	"../../../BaseSystem/Private/Timer/TimerSystem.h"
 
 class WindowsGame {
@@ -27,17 +28,19 @@ private:
 	//System
 	MainWindowSystem	m_mainWindowSystem;
 	InputSystem			m_inputSystem;
+	RenderSystem		m_renderSystem;
 	TimerSystem			m_timerSystem;
+	
 	//SceneManager	m_sceneManager;
 
 	//Method
 	HRESULT	Initialize();
 	HRESULT	InitializeWindow();
 	HRESULT	InitializeInput();
+	HRESULT	InitializeGraphics();
 	HRESULT	InitializeTimer();
 
 	//HRESULT	InitializeSceneManager();
-	//HRESULT	InitializeGraphics();
 	//HRESULT	InitializeAudio();
 	INT		MessageLoop();
 	void	GameMain();

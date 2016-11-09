@@ -34,23 +34,23 @@ HRESULT	WindowsGame::Initialize() {
 		return E_FAIL;
 	}
 	////グラフィック
-	//if (FAILED(InitializeGraphics())) {
-	//	MessageBox(nullptr, TEXT("グラフィックス初期化失敗"), TEXT("エラー"), MB_OK);
-	//	return E_FAIL;
-	//}
+	if (FAILED(InitializeGraphics())) {
+		MessageBox(nullptr, TEXT("InitializeGraphics() is fail"), TEXT("Error: WindowsGame.cpp"), MB_OK);
+		return E_FAIL;
+	}
 	////オーディオ
 	//if (FAILED(InitializeAudio())) {
-	//	MessageBox(nullptr, TEXT("オーディオ初期化失敗"), TEXT("エラー"), MB_OK);
+	//	MessageBox(nullptr, TEXT("オーディオ初期化失敗"), TEXT("Error: WindowsGame.cpp"), MB_OK);
 	//	return E_FAIL;
 	//}
 	//タイマー
 	if (FAILED(InitializeTimer())) {
-		MessageBox(nullptr, TEXT("タイマー初期化失敗"), TEXT("エラー"), MB_OK);
+		MessageBox(nullptr, TEXT("タイマー初期化失敗"), TEXT("Error: WindowsGame.cpp"), MB_OK);
 		return E_FAIL;
 	}
 	////シーンマネージャー
 	//if (FAILED(InitializeSceneManager())) {
-	//	MessageBox(nullptr, TEXT("シーン初期化失敗"), TEXT("エラー"), MB_OK);
+	//	MessageBox(nullptr, TEXT("シーン初期化失敗"), TEXT("Error: WindowsGame.cpp"), MB_OK);
 	//	return E_FAIL;
 	//}
 
@@ -85,12 +85,12 @@ HRESULT	WindowsGame::InitializeInput() {
 @param	void
 @return HRESULT
 ====================================================================================== */
-//HRESULT	WindowsGame::InitializeGraphics() {
-//	D3D_INITDATA _data;
-//	_data.hWnd = m_hWnd;
-//	Renderer.Initialize(&_data);
-//	return S_OK;
-//}
+HRESULT	WindowsGame::InitializeGraphics() {
+	if (false == m_renderSystem.Initialize(m_hWnd)) {
+		return E_FAIL;
+	}
+	return S_OK;
+}
 
 /*! =====================================================================================
 @brief	オーディオ初期化
@@ -129,10 +129,10 @@ HRESULT	WindowsGame::InitializeTimer() {
 INT		WindowsGame::Run() {
 	//初期化
 	if (FAILED(Initialize())) {
-		return 0;
+		return 0;			//初期化失敗：終了
 	}
 	//メッセージループ
-	return MessageLoop();
+	return MessageLoop();	//初期化成功：ゲームループ開始
 }
 
 /*! =====================================================================================
