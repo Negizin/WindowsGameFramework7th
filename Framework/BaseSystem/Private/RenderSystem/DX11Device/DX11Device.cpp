@@ -1,16 +1,15 @@
-#include "DX11Device.h"
-#include "../../UT/Helper.h"
-#include "../ResouceDesc/ResouceDesc.h"
-#include "../DeviceContext/DeviceContext.h"
-#include "../RenderTarget/RenderTarget.h"
-#include "../DepthStencil/DepthStencil.h"
-#include "../State/SamplerState.h"
-#include "../ViewPort/ViewPort.h"
-#include <DXGI.h>
+#include	"DX11Device.h"
+#include	"DeviceContext.h"
+#include	"../Utilities/ResourceDescription/ResouceDesc.h"
+#include	"../ShaderResource/Texture/RenderTarget/RenderTarget.h"
+#include	"../ShaderResource/Texture/DepthStencil/DepthStencil.h"
+#include	"../State/SamplerState.h"
+#include	"../ViewPort/ViewPort.h"
 
+#include	<DXGI.h>
 #pragma comment(lib,"DXGI.lib")
 
-bool DX11Device::GetRefreshRato(UINT refreshRatox, UINT refreshRatoy, const UINT width, const UINT height){
+bool DX11Device::GetRefreshRato(UINT refreshRatox, UINT refreshRatoy, const UINT width, const UINT height) {
 	refreshRatox = 1;
 	refreshRatoy = 60;
 	//変数
@@ -22,34 +21,34 @@ bool DX11Device::GetRefreshRato(UINT refreshRatox, UINT refreshRatoy, const UINT
 	DXGI_MODE_DESC* displayModeList;
 
 	// Create a DirectX graphics interface factory
-	hr = CreateDXGIFactory(__uuidof(IDXGIFactory), (void**)&factory);
-	if (FAILED(hr)){ return FALSE; }
+	hr = CreateDXGIFactory(__uuidof(IDXGIFactory), (void**) &factory);
+	if (FAILED(hr)) { return FALSE; }
 
 	// use the factory to create an adpter for the primary graphics interface(video card)
 	hr = factory->EnumAdapters(0, &adapter);
-	if (FAILED(hr)){ return FALSE; }
+	if (FAILED(hr)) { return FALSE; }
 
 	// enumerrate primary adapter output(monitor)
 	hr = adapter->EnumOutputs(0, &adapterOutput);
-	if (FAILED(hr)){ return FALSE; }
+	if (FAILED(hr)) { return FALSE; }
 
 	// get the number of modes that fit the DXGI_FORMAT_R8G8B8_UNORM display format forthe adapter output(monitor)
 	hr = adapterOutput->GetDisplayModeList(DXGI_FORMAT_R8G8B8A8_UNORM, DXGI_ENUM_MODES_INTERLACED, &numModes, NULL);
-	if (FAILED(hr)){ return FALSE; }
+	if (FAILED(hr)) { return FALSE; }
 
 	// create alist to hold all possible display modes for this monitor/video card combination
 	displayModeList = new(DXGI_MODE_DESC[numModes]);
-	if (!displayModeList){ return FALSE; }
+	if (!displayModeList) { return FALSE; }
 
 	// now fill the display mode list structures
 	hr = adapterOutput->GetDisplayModeList(DXGI_FORMAT_R8G8B8A8_UNORM, DXGI_ENUM_MODES_INTERLACED, &numModes, displayModeList);
-	if (FAILED(hr)){ return FALSE; }
+	if (FAILED(hr)) { return FALSE; }
 
 	// now go through all the display modes and find the one that matches the screen width and height
 	// when a match is found store the numerator and denominator of the refresh rate for that monitor
-	for (UINT i = 0; i < numModes; i++){
-		if (displayModeList[i].Width == width){
-			if (displayModeList[i].Height == height){
+	for (UINT i = 0; i < numModes; i++) {
+		if (displayModeList[i].Width == width) {
+			if (displayModeList[i].Height == height) {
 				refreshRatox = displayModeList[i].RefreshRate.Numerator;
 				refreshRatoy = displayModeList[i].RefreshRate.Denominator;
 			}
@@ -64,19 +63,18 @@ bool DX11Device::GetRefreshRato(UINT refreshRatox, UINT refreshRatoy, const UINT
 	return TRUE;
 }
 
-DeviceContext* DX11Device::GetDC()const
-{
+DeviceContext* DX11Device::GetDC()const {
 	return m_deviceContext;
 }
 
-bool DX11Device::CreateDevice(HWND hWnd, int width, int height){
+bool DX11Device::CreateDevice(HWND hWnd, int width, int height) {
 	//===================================
 	//! Step1 
 	//	Setting SwapChain
 	//===================================
 
 	//リフレッシュレートの取得
-	int refreshRatoX=0, refreshRatoY=0;
+	int refreshRatoX = 0, refreshRatoY = 0;
 	bool result = GetRefreshRato(refreshRatoX, refreshRatoY, width, height);
 	if (result == FALSE) return result;
 
@@ -114,8 +112,7 @@ bool DX11Device::CreateDevice(HWND hWnd, int width, int height){
 	ID3D11DeviceContext * pDevContext;
 
 	HRESULT hr;
-	for (UINT i = 0; i < numDriverTypes; ++i)
-	{
+	for (UINT i = 0; i < numDriverTypes; ++i) {
 		m_driverType = driverTypes[i];
 		hr = D3D11CreateDeviceAndSwapChain(
 			nullptr,			// ディスプレイデバイスのアダプタ（ＮＵＬＬの場合最初に見つかったアダプタ）
@@ -132,36 +129,35 @@ bool DX11Device::CreateDevice(HWND hWnd, int width, int height){
 			&pDevContext);		// デバイスコンテキスト
 		if (SUCCEEDED(hr))break;
 	}
-	if (FAILED(hr)){ return FALSE; }
+	if (FAILED(hr)) { return FALSE; }
 
 	//! Create Context 
 	m_deviceContext = new DeviceContext(this, pDevContext);
 	RenderTarget* rtv = RenderTarget::CrateScreenRTV(*this);
 	m_deviceContext->SetScreenRTV(rtv);
-	
+
 	DepthStencil* depthStencil =
-		DepthStencil::CreateDSV("MainDepthStencil",*this, width, height);
+		DepthStencil::CreateDSV(_T("MainDepthStencil"), *this, width, height);
 	m_deviceContext->SetMainDepthStencil(depthStencil);
-	
+
 	m_deviceContext->ResetDrawCallCount();
 	m_deviceContext->SetRT(0, rtv);
 	//m_deviceContext->ApplyRenderTargets();
-	
+
 	Viewport viewport;
 	viewport.Create(width, height);
 	m_deviceContext->SetViewport(&viewport);
-	
+
 	CreateAndSetRaster();
 //	CreateDeffardContext();
-	
+
 	LoadDefaultShader();
 
 	return TRUE;
 }
 
 
-bool DX11Device::CreateAndSetRaster()
-{
+bool DX11Device::CreateAndSetRaster() {
 	HRESULT hr;
 	D3D11_RASTERIZER_DESC rasterDesc;
 	ID3D11RasterizerState* rasterState;
@@ -180,8 +176,7 @@ bool DX11Device::CreateAndSetRaster()
 
 	// create the rasterrizer state from the description we just filled out 
 	hr = m_device->CreateRasterizerState(&rasterDesc, &rasterState);
-	if (FAILED(hr))
-	{
+	if (FAILED(hr)) {
 		return FALSE;
 	}
 
@@ -189,12 +184,11 @@ bool DX11Device::CreateAndSetRaster()
 	return TRUE;
 }
 
-SamplerState*  DX11Device::CreateSamplerState(const D3D11_SAMPLER_DESC& desc){
+SamplerState*  DX11Device::CreateSamplerState(const D3D11_SAMPLER_DESC& desc) {
 
 	ID3D11SamplerState * pSampler;
 	m_device->CreateSamplerState(&desc, &pSampler);
-	if (pSampler)
-	{
+	if (pSampler) {
 		SamplerState * m_pSampler = new SamplerState;
 		m_pSampler->SetD3DSamplerState(pSampler);
 		return m_pSampler;
@@ -202,13 +196,11 @@ SamplerState*  DX11Device::CreateSamplerState(const D3D11_SAMPLER_DESC& desc){
 	return nullptr;
 }
 
-bool DX11Device::LoadDefaultShader()
-{
+bool DX11Device::LoadDefaultShader() {
 	return TRUE;
 }
 
-bool DX11Device::Flip()
-{
+bool DX11Device::Flip() {
 	if (m_device && m_swapChain)
 		m_swapChain->Present(0, 0);
 	else
@@ -216,18 +208,17 @@ bool DX11Device::Flip()
 	return TRUE;
 }
 
-bool DX11Device::CreateDeffardContext()
-{
+bool DX11Device::CreateDeffardContext() {
 	HRESULT hr;
 	ID3D11DeviceContext * pDevContext;
-	for (int i = 0; i < MAX_DDC; i++){
+	for (int i = 0; i < MAX_DDC; i++) {
 		hr = m_device->CreateDeferredContext(0, &pDevContext);
 		m_DefferadContext[i] = new DeviceContext(this, pDevContext);
 	}
 	return TRUE;
 }
 
-void DX11Device::Release(){
+void DX11Device::Release() {
 	SafeRelease(m_device);
 	SafeRelease(m_swapChain);
 	SafeDelete(m_deviceContext);
