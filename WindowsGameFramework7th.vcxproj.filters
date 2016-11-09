@@ -151,10 +151,61 @@
     <Filter Include="WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\Utilities\Interface">
       <UniqueIdentifier>{491e73bb-8071-4905-8ded-66de06a36c74}</UniqueIdentifier>
     </Filter>
+    <Filter Include="WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\Utilities\ResourceDescription">
+      <UniqueIdentifier>{2105e01d-ad13-436b-8967-a932ec799719}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\ShaderResource\Texture\DepthStencil">
+      <UniqueIdentifier>{5a4739a3-5801-4e1d-831a-ccd05c1e280f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\ResourceManager">
+      <UniqueIdentifier>{181127cd-cb42-46f9-b794-254b2853f250}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\DirectXTex">
+      <UniqueIdentifier>{2cd4cb8a-4ead-4984-a04b-d070fbd27163}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\Utilities\Binary">
+      <UniqueIdentifier>{bc0c0f9e-1c09-4985-a0d4-59b0537c731d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\Shader">
+      <UniqueIdentifier>{59677fa5-6fc0-42e8-a45e-413668214c48}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\Effect">
+      <UniqueIdentifier>{58c5e6fe-2623-4040-b22f-2d83f08c2d8a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\State">
+      <UniqueIdentifier>{1bc3a024-c24e-4320-b96d-132266a90972}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\ViewPort">
+      <UniqueIdentifier>{3f3cfb78-04c6-4dbf-83b3-80864e0a0cee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\Buffer">
+      <UniqueIdentifier>{29088153-bffa-463d-9c55-745200c582b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\Buffer\CBuffer">
+      <UniqueIdentifier>{ceb4a52e-ebd9-4c92-be8d-2f4ac61eae3e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\DrawObject">
+      <UniqueIdentifier>{94600952-b728-4570-b572-109cd98d8f7f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WindowsGameFramework\9_Utilities\Math\Vector">
+      <UniqueIdentifier>{4fd3f37e-34c9-4454-aca1-e42d28ac451f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WindowsGameFramework\9_Utilities\Math\Matrix">
+      <UniqueIdentifier>{87621e45-5049-4df3-acd5-fec8de3dc0ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WindowsGameFramework\9_Utilities\Math\Quaternion">
+      <UniqueIdentifier>{db05492b-8401-4b33-8102-4f52e71922c4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\csv\ApplicationData\windowData.csv">
       <Filter>Assets\csv\ApplicationData</Filter>
+    </None>
+    <None Include="Framework\BaseSystem\Private\RenderSystem\DirectXTex\DirectXTex.inl">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\DirectXTex</Filter>
+    </None>
+    <None Include="Framework\BaseSystem\Private\RenderSystem\Shader\Shader.Inl">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\Shader</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -269,9 +320,6 @@
     <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\Utilities\NameObject\NameObject.h">
       <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\Utilities\NameObject</Filter>
     </ClInclude>
-    <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\Utilities\File\File.h">
-      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\Utilities\File</Filter>
-    </ClInclude>
     <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\RenderSystem.h">
       <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem</Filter>
     </ClInclude>
@@ -301,6 +349,72 @@
     </ClInclude>
     <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\Utilities\Interface\IStaticNameObjectList.h">
       <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\Utilities\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\Utilities\File\File.h">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\Utilities\File</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Desktop\Dx11FrameWork ver4 C++\MSFrameWorkver4\MSFrameWorkver4\FrameWork\Gfx\ResouceDesc\ResourceDesc.h">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\Utilities\ResourceDescription</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\ShaderResource\Texture\DepthStencil\DepthStencil.h">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\ShaderResource\Texture\DepthStencil</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\DirectXTex\DirectXTex.h">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\DirectXTex</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\DirectXTex\DXTex.h">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\DirectXTex</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\Utilities\BinaryUT\Binary.h">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\Utilities\Binary</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\Shader\Shader.h">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\Shader\ShaderUtility.h">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\ResourceManager\ResourceManager.h">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\ResourceManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\Effect\Effect.h">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\Effect</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\State\DepthStencilState.h">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\State</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\State\RasterizerState.h">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\State</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\State\SamplerState.h">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\State</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\ViewPort\ViewPort.h">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\ViewPort</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\Buffer\Buffer.h">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\Buffer</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\Buffer\VertexBuffer.h">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\Buffer</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\Buffer\IndexBuffer.h">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\Buffer</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\Buffer\CBuffer\CBuffer.h">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\Buffer\CBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\DrawObject\DrawObject.h">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\DrawObject</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\Utilities\Math\Vector\Vector.h">
+      <Filter>WindowsGameFramework\9_Utilities\Math\Vector</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\Utilities\Math\Matrix\Matrix.h">
+      <Filter>WindowsGameFramework\9_Utilities\Math\Matrix</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\Utilities\Math\Quaternion\Quaternion.h">
+      <Filter>WindowsGameFramework\9_Utilities\Math\Quaternion</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -402,6 +516,66 @@
     </ClCompile>
     <ClCompile Include="Framework\BaseSystem\Private\RenderSystem\ShaderResource\Texture\RenderTarget\RenderTarget.cpp">
       <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\ShaderResource\Texture\RenderTarget</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\BaseSystem\Private\RenderSystem\ShaderResource\Texture\DepthStencil\DepthStencil.cpp">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\ShaderResource\Texture\DepthStencil</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\BaseSystem\Private\RenderSystem\DirectXTex\DXTex.cpp">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\DirectXTex</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\BaseSystem\Private\RenderSystem\Utilities\BinaryUT\Binary.cpp">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\Utilities\Binary</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\BaseSystem\Private\RenderSystem\Shader\Shader.cpp">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\Shader</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\BaseSystem\Private\RenderSystem\ResourceManager\ResourceManager.cpp">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\ResourceManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\BaseSystem\Private\RenderSystem\Effect\Effect.cpp">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\Effect</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\BaseSystem\Private\RenderSystem\State\DepthStencilState.cpp">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\State</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\BaseSystem\Private\RenderSystem\State\RasterizerState.cpp">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\State</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\BaseSystem\Private\RenderSystem\State\SamplerState.cpp">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\State</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\BaseSystem\Private\RenderSystem\ViewPort\ViewPort.cpp">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\ViewPort</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\BaseSystem\Private\RenderSystem\Buffer\Buffer.cpp">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\Buffer</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\BaseSystem\Private\RenderSystem\Buffer\VertexBuffer.cpp">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\Buffer</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\BaseSystem\Private\RenderSystem\Buffer\IndexBuffer.cpp">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\Buffer</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\BaseSystem\Private\RenderSystem\Buffer\CBuffer\CBuffer.cpp">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\Buffer\CBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\BaseSystem\Private\RenderSystem\DrawObject\DrawObject.cpp">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\DrawObject</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\Utilities\Math\Vector\Vector2.cpp">
+      <Filter>WindowsGameFramework\9_Utilities\Math\Vector</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\Utilities\Math\Vector\Vector3.cpp">
+      <Filter>WindowsGameFramework\9_Utilities\Math\Vector</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\Utilities\Math\Vector\Vector4.cpp">
+      <Filter>WindowsGameFramework\9_Utilities\Math\Vector</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\Utilities\Math\Matrix\Matrix.cpp">
+      <Filter>WindowsGameFramework\9_Utilities\Math\Matrix</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\Utilities\Math\Quaternion\Quaternion.cpp">
+      <Filter>WindowsGameFramework\9_Utilities\Math\Quaternion</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

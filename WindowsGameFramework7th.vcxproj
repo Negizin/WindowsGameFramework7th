@@ -149,8 +149,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <None Include="Assets\csv\ApplicationData\windowData.csv" />
+    <None Include="Framework\BaseSystem\Private\RenderSystem\DirectXTex\DirectXTex.inl" />
+    <None Include="Framework\BaseSystem\Private\RenderSystem\Shader\Shader.Inl" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\Desktop\Dx11FrameWork ver4 C++\MSFrameWorkver4\MSFrameWorkver4\FrameWork\Gfx\ResouceDesc\ResourceDesc.h" />
     <ClInclude Include="Framework\BaseSystem\Private\Common\Console.h" />
     <ClInclude Include="Framework\BaseSystem\Private\Common\DebugNew.h" />
     <ClInclude Include="Framework\BaseSystem\Private\Common\SafeFunction.h" />
@@ -162,21 +165,38 @@
     <ClInclude Include="Framework\BaseSystem\Private\Input\XInputControllerData.h" />
     <ClInclude Include="Framework\BaseSystem\Private\MainWindow\MainWindowNS.h" />
     <ClInclude Include="Framework\BaseSystem\Private\MainWindow\MainWindowSystem.h" />
+    <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\Buffer\Buffer.h" />
+    <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\Buffer\CBuffer\CBuffer.h" />
+    <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\Buffer\IndexBuffer.h" />
+    <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\Buffer\VertexBuffer.h" />
+    <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\DirectXTex\DirectXTex.h" />
+    <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\DirectXTex\DXTex.h" />
+    <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\DrawObject\DrawObject.h" />
     <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\DX11Device\DeviceContext.h" />
     <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\DX11Device\DX11Device.h" />
     <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\DX11Include\DX11IncludeHeader.h" />
+    <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\Effect\Effect.h" />
     <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\RenderSystem.h" />
+    <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\ResourceManager\ResourceManager.h" />
     <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\ShaderResource\ShaderResouce.h" />
+    <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\ShaderResource\Texture\DepthStencil\DepthStencil.h" />
     <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\ShaderResource\Texture\RenderTarget\RenderTarget.h" />
     <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\ShaderResource\Texture\Texture.h" />
+    <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\Shader\Shader.h" />
+    <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\Shader\ShaderUtility.h" />
+    <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\State\DepthStencilState.h" />
+    <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\State\RasterizerState.h" />
+    <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\State\SamplerState.h" />
     <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\SystemResource\ClearPass.h" />
     <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\SystemResource\DrawQueue.h" />
     <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\SystemResource\RenderFlow.h" />
     <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\SystemResource\RenderPass.h" />
+    <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\Utilities\BinaryUT\Binary.h" />
     <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\Utilities\File\File.h" />
     <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\Utilities\Interface\IStaticNameObjectList.h" />
     <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\Utilities\NameObject\NameObject.h" />
     <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\Utilities\XML\Xml.h" />
+    <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\ViewPort\ViewPort.h" />
     <ClInclude Include="Framework\BaseSystem\Private\Scene\LoadScene.h" />
     <ClInclude Include="Framework\BaseSystem\Private\Scene\SceneManager.h" />
     <ClInclude Include="Framework\BaseSystem\Private\Timer\TimerSystem.h" />
@@ -198,22 +218,40 @@
     <ClInclude Include="Framework\GameObjectClasses\GameObject.h" />
     <ClInclude Include="Framework\ObjectManager\ObjectManager.h" />
     <ClInclude Include="Framework\Utilities\Math\Math.h" />
+    <ClInclude Include="Framework\Utilities\Math\Matrix\Matrix.h" />
+    <ClInclude Include="Framework\Utilities\Math\Quaternion\Quaternion.h" />
+    <ClInclude Include="Framework\Utilities\Math\Vector\Vector.h" />
     <ClInclude Include="Framework\Utilities\Random\Random.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Framework\BaseSystem\Private\DebugSystem\ConsoleWindow.cpp" />
     <ClCompile Include="Framework\BaseSystem\Private\Input\InputSystem.cpp" />
     <ClCompile Include="Framework\BaseSystem\Private\MainWindow\MainWindowSystem.cpp" />
+    <ClCompile Include="Framework\BaseSystem\Private\RenderSystem\Buffer\Buffer.cpp" />
+    <ClCompile Include="Framework\BaseSystem\Private\RenderSystem\Buffer\CBuffer\CBuffer.cpp" />
+    <ClCompile Include="Framework\BaseSystem\Private\RenderSystem\Buffer\IndexBuffer.cpp" />
+    <ClCompile Include="Framework\BaseSystem\Private\RenderSystem\Buffer\VertexBuffer.cpp" />
+    <ClCompile Include="Framework\BaseSystem\Private\RenderSystem\DirectXTex\DXTex.cpp" />
+    <ClCompile Include="Framework\BaseSystem\Private\RenderSystem\DrawObject\DrawObject.cpp" />
     <ClCompile Include="Framework\BaseSystem\Private\RenderSystem\DX11Device\DeviceContext.cpp" />
     <ClCompile Include="Framework\BaseSystem\Private\RenderSystem\DX11Device\DX11Device.cpp" />
+    <ClCompile Include="Framework\BaseSystem\Private\RenderSystem\Effect\Effect.cpp" />
     <ClCompile Include="Framework\BaseSystem\Private\RenderSystem\RenderSystem.cpp" />
+    <ClCompile Include="Framework\BaseSystem\Private\RenderSystem\ResourceManager\ResourceManager.cpp" />
+    <ClCompile Include="Framework\BaseSystem\Private\RenderSystem\ShaderResource\Texture\DepthStencil\DepthStencil.cpp" />
     <ClCompile Include="Framework\BaseSystem\Private\RenderSystem\ShaderResource\Texture\RenderTarget\RenderTarget.cpp" />
+    <ClCompile Include="Framework\BaseSystem\Private\RenderSystem\Shader\Shader.cpp" />
+    <ClCompile Include="Framework\BaseSystem\Private\RenderSystem\State\DepthStencilState.cpp" />
+    <ClCompile Include="Framework\BaseSystem\Private\RenderSystem\State\RasterizerState.cpp" />
+    <ClCompile Include="Framework\BaseSystem\Private\RenderSystem\State\SamplerState.cpp" />
     <ClCompile Include="Framework\BaseSystem\Private\RenderSystem\SystemResource\ClearPass.cpp" />
     <ClCompile Include="Framework\BaseSystem\Private\RenderSystem\SystemResource\DrawQueue.cpp" />
     <ClCompile Include="Framework\BaseSystem\Private\RenderSystem\SystemResource\RenderFlow.cpp" />
     <ClCompile Include="Framework\BaseSystem\Private\RenderSystem\SystemResource\RenderPass.cpp" />
+    <ClCompile Include="Framework\BaseSystem\Private\RenderSystem\Utilities\BinaryUT\Binary.cpp" />
     <ClCompile Include="Framework\BaseSystem\Private\RenderSystem\Utilities\File\File.cpp" />
     <ClCompile Include="Framework\BaseSystem\Private\RenderSystem\Utilities\XML\Xml.cpp" />
+    <ClCompile Include="Framework\BaseSystem\Private\RenderSystem\ViewPort\ViewPort.cpp" />
     <ClCompile Include="Framework\BaseSystem\Private\Scene\LoadScene.cpp" />
     <ClCompile Include="Framework\BaseSystem\Private\Scene\SceneManager.cpp" />
     <ClCompile Include="Framework\BaseSystem\Private\Timer\TimerSystem.cpp" />
@@ -233,6 +271,11 @@
     <ClCompile Include="Framework\GameObjectClasses\2D\Sprite2D.cpp" />
     <ClCompile Include="Framework\GameObjectClasses\GameObject.cpp" />
     <ClCompile Include="Framework\ObjectManager\ObjectManager.cpp" />
+    <ClCompile Include="Framework\Utilities\Math\Matrix\Matrix.cpp" />
+    <ClCompile Include="Framework\Utilities\Math\Quaternion\Quaternion.cpp" />
+    <ClCompile Include="Framework\Utilities\Math\Vector\Vector2.cpp" />
+    <ClCompile Include="Framework\Utilities\Math\Vector\Vector3.cpp" />
+    <ClCompile Include="Framework\Utilities\Math\Vector\Vector4.cpp" />
     <ClCompile Include="Framework\Utilities\Random\Random.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
