@@ -15,8 +15,8 @@ public:
 	}
 
 	static bool AddObject(T* object) {
-		DebugLog("StaticNameObjectList Add Name Object List \n\t name = \"%s\" \n\t hash = %x\n", object->GetName().c_str(), object->GetHashCode())
-			m_objectList.push_back(object);
+		//DebugLog("StaticNameObjectList Add Name Object List \n\t name = \"%s\" \n\t hash = %x\n", object->GetName().c_str(), object->GetHashCode())
+		m_objectList.push_back(object);
 		return true;
 	}
 
