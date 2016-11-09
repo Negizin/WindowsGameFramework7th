@@ -3,11 +3,24 @@
 #include	"../Utilities/File/File.h"
 #include	<stdlib.h>
 
+#ifdef _MSC_VER
+#if _MSC_VER >= 1900	//VS2015
+#ifdef _DEBUG
+#pragma comment(lib,"DirectXTex_Win32VS2015_d.lib")
+#else	//Release
+#pragma comment(lib,"Release/DirectXTex_Win32VS2015_r.lib")
+#endif	//debug ? Release
+#else
+#if _MSC_VER >= 1800	//VS2013
 #ifdef _DEBUG
 #pragma comment(lib,"Debug/DirectXTex.lib")
-#else
+#else	//Release
 #pragma comment(lib,"Release/DirectXTex.lib")
-#endif
+#endif	//Debug ? Release
+#endif	//VS2013
+#endif // VS2015 ? VS2013
+#endif	// if defined _MSC_VER
+
 using namespace DirectX;
 
 ID3D11ShaderResourceView* DXTex::LoadFromFile(ID3D11Device* pDev, const TCHAR* filename) {

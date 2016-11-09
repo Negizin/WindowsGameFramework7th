@@ -195,6 +195,7 @@
     <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\Utilities\File\File.h" />
     <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\Utilities\Interface\IStaticNameObjectList.h" />
     <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\Utilities\NameObject\NameObject.h" />
+    <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\Utilities\XML\tiny\tinyxml2.h" />
     <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\Utilities\XML\Xml.h" />
     <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\ViewPort\ViewPort.h" />
     <ClInclude Include="Framework\BaseSystem\Private\Scene\LoadScene.h" />
@@ -231,6 +232,7 @@
     <ClCompile Include="Framework\BaseSystem\Private\RenderSystem\Buffer\CBuffer\CBuffer.cpp" />
     <ClCompile Include="Framework\BaseSystem\Private\RenderSystem\Buffer\IndexBuffer.cpp" />
     <ClCompile Include="Framework\BaseSystem\Private\RenderSystem\Buffer\VertexBuffer.cpp" />
+    <ClCompile Include="Framework\BaseSystem\Private\RenderSystem\DirectXTex\DirectXTex\DirectXTexWIC.cpp" />
     <ClCompile Include="Framework\BaseSystem\Private\RenderSystem\DirectXTex\DXTex.cpp" />
     <ClCompile Include="Framework\BaseSystem\Private\RenderSystem\DrawObject\DrawObject.cpp" />
     <ClCompile Include="Framework\BaseSystem\Private\RenderSystem\DX11Device\DeviceContext.cpp" />
@@ -250,6 +252,7 @@
     <ClCompile Include="Framework\BaseSystem\Private\RenderSystem\SystemResource\RenderPass.cpp" />
     <ClCompile Include="Framework\BaseSystem\Private\RenderSystem\Utilities\BinaryUT\Binary.cpp" />
     <ClCompile Include="Framework\BaseSystem\Private\RenderSystem\Utilities\File\File.cpp" />
+    <ClCompile Include="Framework\BaseSystem\Private\RenderSystem\Utilities\XML\tiny\tinyxml2.cpp" />
     <ClCompile Include="Framework\BaseSystem\Private\RenderSystem\Utilities\XML\Xml.cpp" />
     <ClCompile Include="Framework\BaseSystem\Private\RenderSystem\ViewPort\ViewPort.cpp" />
     <ClCompile Include="Framework\BaseSystem\Private\Scene\LoadScene.cpp" />

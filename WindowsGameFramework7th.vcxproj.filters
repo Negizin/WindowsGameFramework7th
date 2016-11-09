@@ -196,6 +196,12 @@
     <Filter Include="WindowsGameFramework\9_Utilities\Math\Quaternion">
       <UniqueIdentifier>{db05492b-8401-4b33-8102-4f52e71922c4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\Utilities\XML\tiny">
+      <UniqueIdentifier>{3dfc8081-6609-4729-91e2-7d4810f006a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\DirectXTex\DirectXTexSrc">
+      <UniqueIdentifier>{f69ff6ed-9424-4018-8779-05b894bcfe17}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\csv\ApplicationData\windowData.csv">
@@ -416,6 +422,9 @@
     <ClInclude Include="Framework\Utilities\Math\Quaternion\Quaternion.h">
       <Filter>WindowsGameFramework\9_Utilities\Math\Quaternion</Filter>
     </ClInclude>
+    <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\Utilities\XML\tiny\tinyxml2.h">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\Utilities\XML\tiny</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Framework\BaseSystem\Private\MainWindow\MainWindowSystem.cpp">
@@ -576,6 +585,12 @@
     </ClCompile>
     <ClCompile Include="Framework\Utilities\Math\Quaternion\Quaternion.cpp">
       <Filter>WindowsGameFramework\9_Utilities\Math\Quaternion</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\BaseSystem\Private\RenderSystem\Utilities\XML\tiny\tinyxml2.cpp">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\Utilities\XML\tiny</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\BaseSystem\Private\RenderSystem\DirectXTex\DirectXTex\DirectXTexWIC.cpp">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\DirectXTex\DirectXTexSrc</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
