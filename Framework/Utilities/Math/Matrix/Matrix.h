@@ -18,20 +18,19 @@ class Vector3;
 class Vector4;
 class Quaternion;
 
-class Matrix : public XMFLOAT4X4
-{
+class Matrix : public XMFLOAT4X4 {
 public:
 	using oprator = XMFLOAT4X4;
-	Matrix(XMFLOAT4X4& float4x4) :XMFLOAT4X4(float4x4){};
-	Matrix(){ *this = Matrix::identity; };
-	Matrix(XMMATRIX& matrix){ *this = matrix; }
+	Matrix(XMFLOAT4X4& float4x4) :XMFLOAT4X4(float4x4) {};
+	Matrix() { *this = Matrix::identity; };
+	Matrix(XMMATRIX& matrix) { *this = matrix; }
 	Matrix(Vector3& pos, Quaternion& rotate);
 	Matrix(Vector3& pos, Quaternion& rotate, Vector3& scale);
 
 	Matrix& operator = (const XMMATRIX& matrix);
 	Matrix  operator *  (const Matrix& matrix)const;
 	Matrix& operator *= (const Matrix& matrix);
-	
+
 	XMMATRIX  ToXMMATRIX()const;
 	Quaternion ToQuaternion()const;
 	Matrix& Transpose();
