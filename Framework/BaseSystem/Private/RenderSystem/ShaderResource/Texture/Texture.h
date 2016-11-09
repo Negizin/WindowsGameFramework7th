@@ -7,7 +7,8 @@
 //@Date     2016/10/22
 //-----------------------------------------------------------------*/
 #pragma once
-#include <d3d11.h>
+#include	"../../DX11Include/DX11IncludeHeader.h"
+#include	"../../DX11Device/DX11Device.h"
 #include	"../ShaderResouce.h"
 #include	"../../Utilities/NameObject/NameObject.h"
 
