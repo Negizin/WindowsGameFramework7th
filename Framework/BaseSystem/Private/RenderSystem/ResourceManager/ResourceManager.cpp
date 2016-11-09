@@ -1,4 +1,4 @@
-#include	"ResouceManager.h"
+#include	"ResourceManager.h"
 #include	"../DX11Device/DX11Device.h"
 
 #define ASSIGN_INTERFACE(T,Name)\
