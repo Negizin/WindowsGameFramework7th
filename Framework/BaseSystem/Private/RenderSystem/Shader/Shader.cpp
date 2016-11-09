@@ -1,0 +1,9 @@
+#include "Shader.h"
+
+// Static List �̍쐬
+INSTANTIATE_NAME_OBJ_LIST(VertexShader)
+INSTANTIATE_NAME_OBJ_LIST(PixelShader)
+INSTANTIATE_NAME_OBJ_LIST(GeometryShader)
+INSTANTIATE_NAME_OBJ_LIST(HullShader)
+INSTANTIATE_NAME_OBJ_LIST(DomainShader)
+INSTANTIATE_NAME_OBJ_LIST(ComputeShader)
