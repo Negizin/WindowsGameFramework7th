@@ -61,9 +61,6 @@
     <Filter Include="WindowsGameFramework\0_BaseSystem\Private\5_Audio">
       <UniqueIdentifier>{4a210ebd-7211-4715-b6f0-250a1151c0ab}</UniqueIdentifier>
     </Filter>
-    <Filter Include="WindowsGameFramework\0_BaseSystem\Private\4_Rendering">
-      <UniqueIdentifier>{631c7683-7808-4ee6-ab58-4acc0415a93f}</UniqueIdentifier>
-    </Filter>
     <Filter Include="WindowsGameFramework\0_BaseSystem\Private\6_Timer">
       <UniqueIdentifier>{70da2c85-9e68-4339-803d-2e13289938db}</UniqueIdentifier>
     </Filter>
@@ -114,6 +111,45 @@
     </Filter>
     <Filter Include="WindowsGameFramework\0_BaseSystem\Private\8_Debug">
       <UniqueIdentifier>{2055a90b-d07d-43dd-b7e5-cbfaf2a09256}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem">
+      <UniqueIdentifier>{631c7683-7808-4ee6-ab58-4acc0415a93f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\DX11Include">
+      <UniqueIdentifier>{25f78ea4-9322-4870-bd76-9f42f0a9a4ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\Utilities">
+      <UniqueIdentifier>{4fdc537c-7fae-4c5c-9320-7398da431d75}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\Utilities\NameObject">
+      <UniqueIdentifier>{f45edaff-f6a6-4776-856d-99ca763d5ea4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\SystemResource">
+      <UniqueIdentifier>{f2784d62-b506-468f-935e-b5953e1f66d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\DX11Device">
+      <UniqueIdentifier>{35b1380f-8a7d-4f6d-8863-7f31799a1b41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\Utilities\File">
+      <UniqueIdentifier>{4898f260-374e-484b-b2ad-69aea6032919}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\RenderingResource">
+      <UniqueIdentifier>{337ec403-07e3-42c6-9d65-ec77ee5fba30}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\Utilities\XML">
+      <UniqueIdentifier>{615fb007-1fdc-4120-89de-e98d8420a9e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\ShaderResource">
+      <UniqueIdentifier>{4fae6c84-8cc9-40b3-8dce-7ad3a3f365be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\ShaderResource\Texture">
+      <UniqueIdentifier>{8d7b6fbb-ed73-48db-9128-08c715ef2eac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\ShaderResource\Texture\RenderTarget">
+      <UniqueIdentifier>{dcf3737f-3801-4095-a25c-d849f0d50271}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\Utilities\Interface">
+      <UniqueIdentifier>{491e73bb-8071-4905-8ded-66de06a36c74}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -221,6 +257,51 @@
     <ClInclude Include="Framework\BaseSystem\Private\Common\Console.h">
       <Filter>WindowsGameFramework\0_BaseSystem\Private\0_Common</Filter>
     </ClInclude>
+    <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\DX11Include\DX11IncludeHeader.h">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\DX11Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\DX11Device\DX11Device.h">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\DX11Device</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\DX11Device\DeviceContext.h">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\DX11Device</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\Utilities\NameObject\NameObject.h">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\Utilities\NameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\Utilities\File\File.h">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\Utilities\File</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\RenderSystem.h">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\SystemResource\RenderFlow.h">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\SystemResource</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\SystemResource\RenderPass.h">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\SystemResource</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\SystemResource\DrawQueue.h">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\SystemResource</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\SystemResource\ClearPass.h">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\SystemResource</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\Utilities\XML\Xml.h">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\Utilities\XML</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\ShaderResource\ShaderResouce.h">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\ShaderResource</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\ShaderResource\Texture\Texture.h">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\ShaderResource\Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\ShaderResource\Texture\RenderTarget\RenderTarget.h">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\ShaderResource\Texture\RenderTarget</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\Utilities\Interface\IStaticNameObjectList.h">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\Utilities\Interface</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Framework\BaseSystem\Private\MainWindow\MainWindowSystem.cpp">
@@ -291,6 +372,36 @@
     </ClCompile>
     <ClCompile Include="Framework\BaseSystem\Private\DebugSystem\ConsoleWindow.cpp">
       <Filter>WindowsGameFramework\0_BaseSystem\Private\8_Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\BaseSystem\Private\RenderSystem\DX11Device\DX11Device.cpp">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\DX11Device</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\BaseSystem\Private\RenderSystem\DX11Device\DeviceContext.cpp">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\DX11Device</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\BaseSystem\Private\RenderSystem\Utilities\File\File.cpp">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\Utilities\File</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\BaseSystem\Private\RenderSystem\RenderSystem.cpp">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\BaseSystem\Private\RenderSystem\SystemResource\RenderFlow.cpp">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\SystemResource</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\BaseSystem\Private\RenderSystem\SystemResource\RenderPass.cpp">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\SystemResource</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\BaseSystem\Private\RenderSystem\SystemResource\DrawQueue.cpp">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\SystemResource</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\BaseSystem\Private\RenderSystem\SystemResource\ClearPass.cpp">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\SystemResource</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\BaseSystem\Private\RenderSystem\Utilities\XML\Xml.cpp">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\Utilities\XML</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\BaseSystem\Private\RenderSystem\ShaderResource\Texture\RenderTarget\RenderTarget.cpp">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\ShaderResource\Texture\RenderTarget</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
