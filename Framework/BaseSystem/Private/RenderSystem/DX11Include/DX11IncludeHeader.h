@@ -11,6 +11,9 @@
 #include <d3dcompiler.h>
 #include <DXGI.h>
 
+#include	"../../../Public/Common/Common.h"
+#include	"../Utilities/ResourceDescription/ResouceDesc.h"
+
 //使用するライブラリ
 #pragma comment (lib,"d3d11.lib")
 #pragma comment (lib,"d3dcompiler.lib")
