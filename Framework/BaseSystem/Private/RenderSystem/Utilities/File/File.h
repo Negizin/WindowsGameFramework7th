@@ -6,6 +6,9 @@
 ====================================================================================== */
 #pragma once
 #include	"../../../../Public/Common/Common.h"
+#include	"../../../Common/TCHARString.h"	//‚È‚º‚©Common.h‚Ì“à—e‚ª”½‰f‚³‚ê‚È‚¢‚Ì‚Å
+#include	"../../../Common/DebugNew.h"	//‚È‚º‚©Common.h‚Ì“à—e‚ª”½‰f‚³‚ê‚È‚¢‚Ì‚Å
+#include	"../../../Common/SafeFunction.h"//‚È‚º‚©Common.h‚Ì“à—e‚ª”½‰f‚³‚ê‚È‚¢‚Ì‚Å
 #include <string>
 #include <list>
 
