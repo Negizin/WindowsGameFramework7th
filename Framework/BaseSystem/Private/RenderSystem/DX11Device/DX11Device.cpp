@@ -9,9 +9,9 @@
 #include	<DXGI.h>
 #pragma comment(lib,"DXGI.lib")
 
-bool DX11Device::GetRefreshRato(UINT refreshRatox, UINT refreshRatoy, const UINT width, const UINT height) {
-	refreshRatox = 1;
-	refreshRatoy = 60;
+bool DX11Device::GetRefreshRate(UINT* _pRefreshRateNumerator, UINT* _pRefreshRateDenominator, const UINT width, const UINT height) {
+	*_pRefreshRateNumerator = 1;
+	*_pRefreshRateDenominator = 60;
 	//変数
 	HRESULT	hr = S_OK;
 	IDXGIFactory* factory;				// factory
@@ -49,8 +49,8 @@ bool DX11Device::GetRefreshRato(UINT refreshRatox, UINT refreshRatoy, const UINT
 	for (UINT i = 0; i < numModes; i++) {
 		if (displayModeList[i].Width == width) {
 			if (displayModeList[i].Height == height) {
-				refreshRatox = displayModeList[i].RefreshRate.Numerator;
-				refreshRatoy = displayModeList[i].RefreshRate.Denominator;
+				*_pRefreshRateNumerator = displayModeList[i].RefreshRate.Numerator;
+				*_pRefreshRateDenominator = displayModeList[i].RefreshRate.Denominator;
 			}
 		}
 	}
@@ -74,11 +74,11 @@ bool DX11Device::CreateDevice(HWND hWnd, int width, int height) {
 	//===================================
 
 	//リフレッシュレートの取得
-	int refreshRatoX = 0, refreshRatoY = 0;
-	bool result = GetRefreshRato(refreshRatoX, refreshRatoY, width, height);
+	unsigned int _refreshRateNumerator = 0, _refreshDenominator = 0;
+	bool result = GetRefreshRate(&_refreshRateNumerator, &_refreshDenominator, width, height);
 	if (result == FALSE) return result;
 
-	SWAP_CHAIN_DESC swapChainDesc(hWnd, width, height, refreshRatoX, refreshRatoY);
+	SWAP_CHAIN_DESC swapChainDesc(hWnd, width, height, _refreshRateNumerator, _refreshDenominator);
 
 	//===================================
 	//! Step2 

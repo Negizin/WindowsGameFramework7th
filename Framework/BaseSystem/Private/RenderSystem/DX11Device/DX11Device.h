@@ -17,9 +17,9 @@ class SamplerState;
 class  IDX11Device {
 public:
 	//get device contetxt
-	virtual DeviceContext * GetDC()const = 0;
-	virtual ID3D11Device * GetDevD3D()const = 0;
-	virtual IDXGISwapChain *	 GetSC()const = 0;
+	virtual DeviceContext*	GetDC()const = 0;
+	virtual ID3D11Device*	GetDevD3D()const = 0;
+	virtual IDXGISwapChain*	GetSC()const = 0;
 private:
 
 };
@@ -69,7 +69,7 @@ private:
 	//		 上記の引数は戻り値として扱う。
 	//		 width & height 画面サイズ
 	// @return true is success
-	bool GetRefreshRato(UINT refreshRatox, UINT refreshRatoy, const UINT width, const UINT height);
+	bool GetRefreshRate(UINT* _pRefreshRatox, UINT *_pRefreshRatoy, const UINT width, const UINT height);
 
 	//=============================================
 	// ! LoadDefaultShader

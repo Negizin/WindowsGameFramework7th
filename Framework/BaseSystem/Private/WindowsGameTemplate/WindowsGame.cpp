@@ -33,7 +33,7 @@ HRESULT	WindowsGame::Initialize() {
 		MessageBox(nullptr, TEXT("InitializeInput() is fail"), TEXT("Error: WindowsGame.cpp"), MB_OK);
 		return E_FAIL;
 	}
-	////グラフィック
+	//グラフィック
 	if (FAILED(InitializeGraphics())) {
 		MessageBox(nullptr, TEXT("InitializeGraphics() is fail"), TEXT("Error: WindowsGame.cpp"), MB_OK);
 		return E_FAIL;
