@@ -7,11 +7,12 @@
 
 #include	"../../Public/MainWindow/MainWindow.h"
 
+DX11Device*	RenderSystem::m_pDevice = nullptr;
+
 /*! =====================================================================================
 @brief	コンストラクタ
 ====================================================================================== */
-RenderSystem::RenderSystem() :
-	m_pDevice(nullptr) {
+RenderSystem::RenderSystem() {
 
 }
 
@@ -92,6 +93,19 @@ Texture* RenderSystem::FindTextureResource(const tstring& name) {
 	}
 	return nullptr;
 }
+
+/*! =====================================================================================
+@brief	デバイス取得
+@param	void
+@return void
+====================================================================================== */
+const DX11Device * RenderSystem::GetDevice() {
+	return m_pDevice;
+}
+
+
+
+
 bool RenderSystem::LoadRenderSystemFromXML(DX11Device* pDev, const tstring&name) {
 	XML xml;
 	xml.LoadXML(UT::Resource::GetRenderSystemDirectory() + name);

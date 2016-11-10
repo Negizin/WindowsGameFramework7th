@@ -72,10 +72,12 @@ public:
 
 	Texture*	FindTextureResource(const tstring & name);
 
+	
+	static const DX11Device*	GetDevice();
 
 protected:
 	//デバイス
-	DX11Device*		m_pDevice;
+	static	DX11Device*		m_pDevice;
 
 	//レンダリング・システムリソース
 
