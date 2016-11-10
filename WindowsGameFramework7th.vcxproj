@@ -216,6 +216,7 @@
     <ClInclude Include="Framework\ComponentClasses\Transform\Transform.h" />
     <ClInclude Include="Framework\GameObjectClasses\2D\FadeSprite.h" />
     <ClInclude Include="Framework\GameObjectClasses\2D\Sprite2D.h" />
+    <ClInclude Include="Framework\GameObjectClasses\Camera\Camera.h" />
     <ClInclude Include="Framework\GameObjectClasses\GameObject.h" />
     <ClInclude Include="Framework\ObjectManager\ObjectManager.h" />
     <ClInclude Include="Framework\Utilities\Math\Math.h" />
@@ -272,6 +273,7 @@
     <ClCompile Include="Framework\ComponentClasses\Transform\Transform.cpp" />
     <ClCompile Include="Framework\GameObjectClasses\2D\FadeSprite.cpp" />
     <ClCompile Include="Framework\GameObjectClasses\2D\Sprite2D.cpp" />
+    <ClCompile Include="Framework\GameObjectClasses\Camera\Camera.cpp" />
     <ClCompile Include="Framework\GameObjectClasses\GameObject.cpp" />
     <ClCompile Include="Framework\ObjectManager\ObjectManager.cpp" />
     <ClCompile Include="Framework\Utilities\Math\Matrix\Matrix.cpp" />
