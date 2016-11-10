@@ -49,7 +49,6 @@ void	SceneManager::Update() {
 
 	//シーン遷移あり
 	if (m_pNextScene != m_pNowScene) {
-
 		//ローディングの完了によるシーン遷移の場合
 		if (m_bNowLoading == true) {
 			m_bNowLoading = false;		//ローディングOFF
