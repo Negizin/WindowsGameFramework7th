@@ -16,6 +16,11 @@ ObjectManager::ObjectManager() {
 @param	void
 ====================================================================================== */
 ObjectManager::~ObjectManager() {
+	for (size_t i = 0; i < 4; i++) {
+		for (auto itr = m_objectArray[i].begin(); itr != m_objectArray[i].end(); itr++) {
+			SafeDelete(*itr);
+		}
+	}
 }
 
 /*! =====================================================================================
