@@ -16,7 +16,7 @@ Matrix::Matrix(Vector3& p, Quaternion& q) {
 
 //! 位置と回転と拡縮から行列を生成するコンストラクタ
 Matrix::Matrix(const Vector3& _position, const Quaternion& _quaternion, const Vector3& _scale) {
-	*this = CreateScale(_scale) * CreateRotate(q) * CreateTranslate(_position);
+	*this = CreateScale(_scale) * CreateRotate(_quaternion) * CreateTranslate(_position);
 }
 
 //! XNA行列からの変換用
