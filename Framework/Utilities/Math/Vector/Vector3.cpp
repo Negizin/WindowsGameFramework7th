@@ -83,7 +83,7 @@ float  Vector3::Length()const {
 	return (vLength.m128_f32[0]);
 }
 
-Vector3&  Vector3::Normalize() {
+const Vector3&  Vector3::Normalize() {
 	*this = Normalized();
 	return *this;
 }

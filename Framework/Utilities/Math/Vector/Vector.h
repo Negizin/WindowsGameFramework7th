@@ -105,7 +105,7 @@ public:
 	Vector3& TransformCood(const  Matrix& mat);
 	XMVECTOR  ToXMVECTOR()const;
 	float	  Length()const;
-	Vector3& Normalize();
+	const Vector3& Normalize();
 	Vector3  Normalized()const;
 
 
