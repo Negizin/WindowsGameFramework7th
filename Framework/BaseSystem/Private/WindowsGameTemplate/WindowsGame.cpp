@@ -195,8 +195,8 @@ void WindowsGame::UpdateScene() {
 @return void
 ====================================================================================== */
 void WindowsGame::Render() {
-	if (SUCCEEDED(m_renderSystem.StartReceivingDrawObject())) {	//描画要求受付開始
+	
 		m_sceneManager.SendDrawObject();	//描画キュー更新
 		m_renderSystem.Render();			//描画キュー処理
-	}
+	
 }
