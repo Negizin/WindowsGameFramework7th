@@ -25,7 +25,7 @@ public:
 	Matrix() { *this = Matrix::identity; };
 	Matrix(XMMATRIX& matrix) { *this = matrix; }
 	Matrix(Vector3& pos, Quaternion& rotate);
-	Matrix(Vector3& pos, Quaternion& rotate, Vector3& scale);
+	Matrix(const Vector3& pos, const Quaternion& rotate, const Vector3& scale);
 
 	Matrix& operator = (const XMMATRIX& matrix);
 	Matrix  operator *  (const Matrix& matrix)const;
@@ -33,7 +33,7 @@ public:
 
 	XMMATRIX  ToXMMATRIX()const;
 	Quaternion ToQuaternion()const;
-	Matrix& Transpose();
+	const Matrix& Transpose();
 	Matrix& Inverse();
 
 	Matrix Transposed()const;
