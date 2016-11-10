@@ -24,6 +24,7 @@ RenderSystem::~RenderSystem() {
 
 /*! =====================================================================================
 @brief	初期化処理（デバイス生成）
+@param	HWND：ウィンドウハンドル
 @return	bool
 ====================================================================================== */
 bool RenderSystem::Initialize(HWND _hWnd) {
@@ -36,10 +37,15 @@ bool RenderSystem::Initialize(HWND _hWnd) {
 	return true;
 }
 
-bool RenderSystem::CallRender(DeviceContext *pDC) {
-	m_PreFlowAndQue.Render(pDC);
-	m_FlowAndQue.Render(pDC);
-	m_PostFlowAndQue.Render(pDC);
+/*! =====================================================================================
+@brief	描画処理
+@param	void
+@return void
+====================================================================================== */
+bool RenderSystem::CallRender() {
+	m_PreFlowAndQue.Render(m_pDevice->GetDC());
+	m_FlowAndQue.Render(m_pDevice->GetDC());
+	m_PostFlowAndQue.Render(m_pDevice->GetDC());
 	return true;
 }
 
