@@ -17,7 +17,7 @@ Transform::Transform() :
 @param	Quaternion	quaternion
 @param	Vector3		scale
 ====================================================================================== */
-Transform::Transform(const Vector3 & _position, const Quaternion & _rotation, const Vector3 & _scale = Vector3::one) :
+Transform::Transform(const Vector3 & _position, const Quaternion & _rotation, const Vector3 & _scale) :
 	m_name(_T("NoName")),
 	m_pGameObject(m_pGameObject),
 	m_position(_position),
@@ -42,11 +42,11 @@ Transform::~Transform() {
 }
 
 /*! =====================================================================================
-@brief	èuä‘à⁄ìÆ
+@brief	ç¿ïWà⁄ìÆ
 @param	Vector3ÅFà⁄ìÆêÊç¿ïW
 @return void
 ====================================================================================== */
-void Transform::Teleport(const Vector3 & _position) {
+void Transform::SetPosition(const Vector3 & _position) {
 	m_position = _position;
 }
 

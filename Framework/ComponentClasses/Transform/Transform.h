@@ -19,7 +19,7 @@ public:
 	virtual ~Transform();	
 
 	//
-	void	Teleport(const Vector3& _position);
+	void	SetPosition(const Vector3& _position);
 	void	Translate(const Vector3& _vector);
 	void	LookDirection(const Vector3& _direction);
 	void	LookAt(const Vector3& _point);
