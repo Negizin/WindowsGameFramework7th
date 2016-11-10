@@ -24,22 +24,24 @@ private:
 
 };
 
+
 //Dx11	Device Class
 class DX11Device :public IDX11Device {
 public:
+	DX11Device();
+	~DX11Device();
+
 	static const UINT	 MAX_DDC = 6;			//DeffardContextの最大数
+
 	//=============================================
 	// ! Get DeviceContext
-	DeviceContext* GetDC()const override;
-
+	DeviceContext*	GetDC()const override;
 	//=============================================
 	// ! Get DirectX Device Pointer
-	ID3D11Device*	 GetDevD3D()const override { return m_device; }
-
+	ID3D11Device*	GetDevD3D()const override;
 	//=============================================
 	// ! Get DirectX Swap Chain
-	IDXGISwapChain*	 GetSC()const override { return m_swapChain; }
-
+	IDXGISwapChain*	GetSC()const override;
 
 	//=============================================
 	// ! CreateDevice
@@ -49,6 +51,13 @@ public:
 	// @return true is success
 	bool CreateDevice(HWND hWnd, int width, int height);
 
+	//=============================================
+	// ! Release
+	void Release();
+
+	//=============================================
+	// ! CreateSamplerState
+	SamplerState*  CreateSamplerState(const D3D11_SAMPLER_DESC& desc);
 
 	//=============================================
 	// ! Flip
@@ -56,10 +65,6 @@ public:
 	// @return true is success
 	bool Flip();
 
-
-	SamplerState*  CreateSamplerState(const D3D11_SAMPLER_DESC& desc);
-
-	void Release();
 private:
 
 	//=============================================
@@ -83,7 +88,10 @@ private:
 	// @return true is success
 	bool CreateAndSetRaster();
 
-
+	//=============================================
+	// ! CreateDeffardContext
+	// ディファードコンテキストの作成
+	// @return true is success
 	bool CreateDeffardContext();
 private:
 
