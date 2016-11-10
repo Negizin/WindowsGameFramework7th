@@ -5,6 +5,7 @@
 @date		2016.11.05	V‹Kì¬
 ====================================================================================== */
 #pragma once
+#include	"../BaseSystem/Public/Common/Common.h"
 
 //‘O•û’è‹`
 class GameObject;
