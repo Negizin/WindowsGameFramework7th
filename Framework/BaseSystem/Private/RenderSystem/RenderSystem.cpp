@@ -27,7 +27,7 @@ RenderSystem::~RenderSystem() {
 @param	HWND：ウィンドウハンドル
 @return	bool
 ====================================================================================== */
-bool RenderSystem::Initialize(HWND _hWnd) {
+bool	RenderSystem::Initialize(HWND _hWnd) {
 	m_pDevice = new DX11Device();
 	bool _bResult = m_pDevice->CreateDevice(_hWnd, MainWindow::GetWindowWidth(), MainWindow::GetWindowHeight());
 	if (_bResult == false) {
@@ -38,16 +38,31 @@ bool RenderSystem::Initialize(HWND _hWnd) {
 }
 
 /*! =====================================================================================
-@brief	描画処理
+@brief	描画要求受付前処理（描画用キュー,RTV,DSVなどのバッファクリア）
 @param	void
-@return void
+@return HRESULT (互換性のため、常にS_OKを返す）
 ====================================================================================== */
-bool RenderSystem::CallRender() {
+HRESULT	RenderSystem::StartReceivingDrawObject() {
+	m_pDevice->GetDC()->Clear();	//RTV・DSVクリア
+	return S_OK;
+}
+
+/*! =====================================================================================
+@brief	描画キュー処理
+@param	void
+@return bool
+====================================================================================== */
+bool RenderSystem::Render() {
+
 	m_PreFlowAndQue.Render(m_pDevice->GetDC());
 	m_FlowAndQue.Render(m_pDevice->GetDC());
 	m_PostFlowAndQue.Render(m_pDevice->GetDC());
+
+	m_pDevice->Flip();
 	return true;
 }
+
+
 
 bool RenderSystem::SetDrawQue(DrawQueue *Queue, TARGET_FLOW targetFlow) {
 	switch (targetFlow) {

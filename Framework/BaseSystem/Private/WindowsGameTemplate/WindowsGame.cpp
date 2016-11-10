@@ -6,15 +6,14 @@
 ====================================================================================== */
 WindowsGame::WindowsGame(HINSTANCE _hInstance)
 	:m_hInstance(_hInstance),
-	m_hWnd(NULL){
+	m_hWnd(NULL) {
 }
 
 /*! =====================================================================================
 @brief	デストラクタ
 @param	void
 ====================================================================================== */
-WindowsGame::~WindowsGame()
-{
+WindowsGame::~WindowsGame() {
 }
 
 /*! =====================================================================================
@@ -45,14 +44,14 @@ HRESULT	WindowsGame::Initialize() {
 	//}
 	//タイマー
 	if (FAILED(InitializeTimer())) {
-		MessageBox(nullptr, TEXT("タイマー初期化失敗"), TEXT("Error: WindowsGame.cpp"), MB_OK);
+		MessageBox(nullptr, TEXT("InitializeTimer() is fail"), TEXT("Error: WindowsGame.cpp"), MB_OK);
 		return E_FAIL;
 	}
-	////シーンマネージャー
-	//if (FAILED(InitializeSceneManager())) {
-	//	MessageBox(nullptr, TEXT("シーン初期化失敗"), TEXT("Error: WindowsGame.cpp"), MB_OK);
-	//	return E_FAIL;
-	//}
+	//シーンマネージャー
+	if (FAILED(InitializeSceneManager())) {
+		MessageBox(nullptr, TEXT("InitializeSceneManager() is fail"), TEXT("Error: WindowsGame.cpp"), MB_OK);
+		return E_FAIL;
+	}
 
 	return S_OK;
 }
@@ -116,13 +115,13 @@ HRESULT	WindowsGame::InitializeTimer() {
 @param	void
 @return HRESULT
 ====================================================================================== */
-//HRESULT	WindowsGame::InitializeSceneManager() {
-//	m_SceneManager.Initialize();
-//	return S_OK;
-//}
+HRESULT	WindowsGame::InitializeSceneManager() {
+	m_sceneManager.Initialize();
+	return S_OK;
+}
 
 /*! =====================================================================================
-@brief	初期化完了、稼働
+@brief	初期化完了後、ゲームループ稼働
 @param	void
 @return INT	終了メッセージ
 ====================================================================================== */
@@ -131,7 +130,6 @@ INT		WindowsGame::Run() {
 	if (FAILED(Initialize())) {
 		return 0;			//初期化失敗：終了
 	}
-	//メッセージループ
 	return MessageLoop();	//初期化成功：ゲームループ開始
 }
 
@@ -152,10 +150,10 @@ INT	WindowsGame::MessageLoop() {
 			}
 			GameMain();
 		}
-		return	(INT)msg.wParam;
+		return	(INT) msg.wParam;
 	}
 	catch (...) {
-		MessageBox(NULL, _T("メッセージループエラー"), _T("エラー"), MB_OK);
+		MessageBox(NULL, _T("MessageLoop() is fail"), _T("Error:WindowsGame.cpp"), MB_OK);
 	}
 	return 0;
 }
@@ -168,8 +166,8 @@ INT	WindowsGame::MessageLoop() {
 void	WindowsGame::GameMain() {
 	if (m_timerSystem.ControlFPS()) {
 		UpdateInputSystem();	//入力システム更新
-		//UpdateScene();	//更新処理
-		//Render();		//描画処理
+		UpdateScene();	//更新処理
+		Render();		//描画処理
 	}
 }
 
@@ -187,21 +185,18 @@ void WindowsGame::UpdateInputSystem() {
 @param	void
 @return void
 ====================================================================================== */
-//void WindowsGame::UpdateScene() {
-//	m_SceneManager.Update();
-//}
+void WindowsGame::UpdateScene() {
+	m_sceneManager.Update();
+}
 
 /*! =====================================================================================
-@brief	描画更新
+@brief	描画処理
 @param	void
 @return void
 ====================================================================================== */
-//void WindowsGame::Render() {
-//	if (SUCCEEDED(Renderer.BeginRender()))	//描画開始
-//	{
-//		m_SceneManager.RenderScene();
-//		Renderer.EndRender();				//描画終了
-//	}
-//	//バッグバッファ表示
-//	Renderer.ShowBackbuffer();
-//}
+void WindowsGame::Render() {
+	if (SUCCEEDED(m_renderSystem.StartReceivingDrawObject())) {	//描画要求受付開始
+		m_sceneManager.SendDrawObject();	//描画キュー更新
+		m_renderSystem.Render();			//描画キュー処理
+	}
+}

@@ -70,7 +70,7 @@ void	SceneManager::Update() {
 @param	void
 @return void
 ====================================================================================== */
-void	SceneManager::RenderScene() {
+void	SceneManager::SendDrawObject() {
 
 	if (m_pNowScene == nullptr) {
 		return;

@@ -27,11 +27,18 @@ public:
 	bool	Initialize(HWND _hWnd);
 
 	/*! =====================================================================================
+	@brief	描画要求受付開始（描画用キュー・RTV,D・バッファクリア）
+	@param	void
+	@return void
+	====================================================================================== */
+	HRESULT	StartReceivingDrawObject();
+
+	/*! =====================================================================================
 	@brief	描画処理
 	@param	void
 	@return void
 	====================================================================================== */
-	virtual bool CallRender();
+	virtual bool Render();
 
 	//RenderFlowとDrawQueueの構造体
 	struct FlowAndQue {
@@ -53,6 +60,10 @@ public:
 		DEFAULT_RENDERER,
 		POST_RENDERER,
 	};
+
+
+
+
 
 	bool	SetDrawQue(DrawQueue* pDrawQue, TARGET_FLOW = TARGET_FLOW::DEFAULT_RENDERER);
 	bool	SetShaderFlow(RenderFlow* pFlow, TARGET_FLOW = TARGET_FLOW::DEFAULT_RENDERER);

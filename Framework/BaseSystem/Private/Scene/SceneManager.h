@@ -13,9 +13,9 @@ public:
 	SceneManager();
 	~SceneManager();
 
-	void	Initialize();	//初期化処理
-	void	Update();		//更新処理
-	void	RenderScene();	//描画処理
+	void	Initialize();		//初期化処理
+	void	Update();			//更新処理
+	void	SendDrawObject();	//描画処理
 
 private:
 	BaseScene*	m_pNowScene;	//現在実行中のシーン
