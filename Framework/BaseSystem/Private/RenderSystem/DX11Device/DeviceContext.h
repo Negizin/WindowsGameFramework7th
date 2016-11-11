@@ -158,14 +158,18 @@ public:
 	bool ApplyRasterizer();
 
 
-	void SetMainCamera(Camera *_camera) { m_mainCamera = _camera; }
-	Camera *GetMainCamera();
-	void GetMainCamera(Camera *camera) { m_mainCamera = camera; }
+
+	void	SetMainCamera(Camera *_camera) { m_mainCamera = _camera; }
+	Camera*	GetMainCamera();
+	void	GetMainCamera(Camera *camera) { m_mainCamera = camera; }
 	D3D11_DEVICE_CONTEXT_TYPE GetContextType() { return m_pDeviceContext->GetType(); }
 	DepthStencil *GetMainDSV() { return m_mainDepthStencil; }
 	bool ClearVertexBuffer();
 	bool ClearIndexBuffer();
 	bool ClearCBuffer(int index = -1, SHADER_TYPE type = SHADER_TYPE::ALL_SHADER);
+
+	void	UpdateCameraCBuffer();
+
 private:
 
 	DX11Device*				m_pDevice;
@@ -181,5 +185,7 @@ private:
 	DepthStencilState*                m_pDepthStencilState;
 	Camera*			   	    m_mainCamera;
 	int						m_drawCallCount;
+
+
 
 };

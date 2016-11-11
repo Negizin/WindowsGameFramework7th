@@ -12,8 +12,8 @@
 #include	"../Buffer/CBuffer/CBuffer.h"
 #include	"../Buffer/IndexBuffer.h"
 #include	"../Buffer/VertexBuffer.h"
-//
-//#include "../Camera/Camera.h"
+
+#include	"../../../../GameObjectClasses/Camera/Camera.h"
 
 
 using namespace DirectX;
@@ -485,4 +485,15 @@ bool DeviceContext::ClearCBuffer(int index, SHADER_TYPE type) {
 		m_pDeviceContext->CSSetConstantBuffers(index, count, nullptr);
 
 	return true;
+}
+
+/*! =====================================================================================
+@brief	
+@param	void
+@return void
+====================================================================================== */
+void DeviceContext::UpdateCameraCBuffer() {
+	if (m_mainCamera != nullptr) {
+		m_mainCamera->UpdateForCBuffer();
+	}
 }
