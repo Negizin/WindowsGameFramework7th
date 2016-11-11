@@ -2,7 +2,11 @@
 #include	"../../../GameObjectClasses/2D/FadeSprite.h"
 
 /*! =====================================================================================
-@brief	コンストラクタ
+@brief	コンストラクタ	
+
+	!! コンストラクタは継承先でも最低限の処理に抑えてください。
+	!! ロードにコストを要するものは並列処理されるInitialize()に実装するようにしてください。
+
 @param	void
 ====================================================================================== */
 BaseScene::BaseScene() {
@@ -77,11 +81,11 @@ bool BaseScene::CheckSceneTransition() {
 	}
 
 	//シーン遷移条件
-	if (true) {
+	if (false) {
 		m_nextSceneID = 1;
 		return true;
 	}
-	else if(true){
+	else if(false){
 		m_nextSceneID = 2;
 		return true;
 	}
