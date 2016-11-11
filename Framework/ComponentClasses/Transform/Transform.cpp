@@ -7,7 +7,6 @@
 Transform::Transform() :
 	m_name(_T("NoName")),
 	m_scale(1.0f, 1.0f, 1.0f),
-	m_pGameObject(nullptr),
 	m_pParent(nullptr) {
 }
 
@@ -19,7 +18,6 @@ Transform::Transform() :
 ====================================================================================== */
 Transform::Transform(const Vector3 & _position, const Quaternion & _rotation, const Vector3 & _scale) :
 	m_name(_T("NoName")),
-	m_pGameObject(m_pGameObject),
 	m_position(_position),
 	m_rotation(_rotation),
 	m_scale(_scale) {

@@ -50,7 +50,6 @@ private:
 	
 	//
 	tstring		m_name;
-	GameObject*	m_pGameObject;
 	Transform*	m_pParent = nullptr;
 	//TransForm*	m_pFirstChild = nullptr;
 	//TransForm*	m_pSubling = nullptr;
