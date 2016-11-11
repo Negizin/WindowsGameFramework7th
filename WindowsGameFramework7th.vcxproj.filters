@@ -205,6 +205,9 @@
     <Filter Include="WindowsGameFramework\2_GameObjectClasses\Camera">
       <UniqueIdentifier>{c50cacce-4bde-43cc-8e28-5fdc214ab3a8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="DemoScene">
+      <UniqueIdentifier>{20ca1835-cc4b-4dc6-8cf8-17741d3883a3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\csv\ApplicationData\windowData.csv">
@@ -431,6 +434,15 @@
     <ClInclude Include="Framework\GameObjectClasses\Camera\Camera.h">
       <Filter>WindowsGameFramework\2_GameObjectClasses\Camera</Filter>
     </ClInclude>
+    <ClInclude Include="DemoScene\DemoScene.h">
+      <Filter>DemoScene</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\BaseSystem\Public\Render\Render.h">
+      <Filter>WindowsGameFramework\0_BaseSystem\Public\4_Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\RenderSystemNS.h">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Framework\BaseSystem\Private\MainWindow\MainWindowSystem.cpp">
@@ -600,6 +612,12 @@
     </ClCompile>
     <ClCompile Include="Framework\GameObjectClasses\Camera\Camera.cpp">
       <Filter>WindowsGameFramework\2_GameObjectClasses\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="DemoScene\DemoScene.cpp">
+      <Filter>DemoScene</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\BaseSystem\Public\Render\Render.cpp">
+      <Filter>WindowsGameFramework\0_BaseSystem\Public\4_Rendering</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

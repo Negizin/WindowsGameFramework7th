@@ -154,6 +154,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\Desktop\Dx11FrameWork ver4 C++\MSFrameWorkver4\MSFrameWorkver4\FrameWork\Gfx\ResouceDesc\ResourceDesc.h" />
+    <ClInclude Include="DemoScene\DemoScene.h" />
     <ClInclude Include="Framework\BaseSystem\Private\Common\Console.h" />
     <ClInclude Include="Framework\BaseSystem\Private\Common\DebugNew.h" />
     <ClInclude Include="Framework\BaseSystem\Private\Common\SafeFunction.h" />
@@ -177,6 +178,7 @@
     <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\DX11Include\DX11IncludeHeader.h" />
     <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\Effect\Effect.h" />
     <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\RenderSystem.h" />
+    <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\RenderSystemNS.h" />
     <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\ResourceManager\ResourceManager.h" />
     <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\ShaderResource\ShaderResouce.h" />
     <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\ShaderResource\Texture\DepthStencil\DepthStencil.h" />
@@ -206,6 +208,7 @@
     <ClInclude Include="Framework\BaseSystem\Public\Common\Common.h" />
     <ClInclude Include="Framework\BaseSystem\Public\Input\Input.h" />
     <ClInclude Include="Framework\BaseSystem\Public\MainWindow\MainWindow.h" />
+    <ClInclude Include="Framework\BaseSystem\Public\Render\Render.h" />
     <ClInclude Include="Framework\BaseSystem\Public\Scene\BaseScene.h" />
     <ClInclude Include="Framework\BaseSystem\Public\Timer\Timer.h" />
     <ClInclude Include="Framework\ComponentClasses\Collider\3D\BoxCollider.h" />
@@ -226,6 +229,7 @@
     <ClInclude Include="Framework\Utilities\Random\Random.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="DemoScene\DemoScene.cpp" />
     <ClCompile Include="Framework\BaseSystem\Private\DebugSystem\ConsoleWindow.cpp" />
     <ClCompile Include="Framework\BaseSystem\Private\Input\InputSystem.cpp" />
     <ClCompile Include="Framework\BaseSystem\Private\MainWindow\MainWindowSystem.cpp" />
@@ -263,6 +267,7 @@
     <ClCompile Include="Framework\BaseSystem\Private\WindowsGameTemplate\WinMain.cpp" />
     <ClCompile Include="Framework\BaseSystem\Public\Input\Input.cpp" />
     <ClCompile Include="Framework\BaseSystem\Public\MainWindow\MainWindow.cpp" />
+    <ClCompile Include="Framework\BaseSystem\Public\Render\Render.cpp" />
     <ClCompile Include="Framework\BaseSystem\Public\Scene\BaseScene.cpp" />
     <ClCompile Include="Framework\BaseSystem\Public\Timer\Timer.cpp" />
     <ClCompile Include="Framework\ComponentClasses\Collider\3D\BoxCollider.cpp" />
