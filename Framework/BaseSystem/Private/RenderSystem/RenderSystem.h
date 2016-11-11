@@ -27,13 +27,6 @@ public:
 	bool	Initialize(HWND _hWnd);
 
 	/*! =====================================================================================
-	@brief	描画要求受付開始（描画用キュー・RTV,D・バッファクリア）
-	@param	void
-	@return void
-	====================================================================================== */
-	HRESULT	StartReceivingDrawObject();
-
-	/*! =====================================================================================
 	@brief	描画処理
 	@param	void
 	@return void
@@ -74,6 +67,10 @@ public:
 
 	
 	static const DX11Device*	GetDevice();
+
+
+	/*	 川上追記	将来的にPublicなRenderに移行・実装したい関数群　*/
+	void	SetMainCamera(Camera* _pMainCamera);
 
 protected:
 	//デバイス

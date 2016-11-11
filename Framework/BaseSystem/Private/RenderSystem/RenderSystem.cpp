@@ -6,6 +6,7 @@
 #include	"ResourceManager\ResourceManager.h"
 
 #include	"../../Public/MainWindow/MainWindow.h"
+#include	"RenderSystemNS.h"
 
 DX11Device*	RenderSystem::m_pDevice = nullptr;
 
@@ -35,17 +36,8 @@ bool	RenderSystem::Initialize(HWND _hWnd) {
 		MessageBox(NULL, _T("Initialize() is fail"), _T("Error:RenderSystem.cpp"), MB_OK);
 		return false;
 	}
+	g_pDevice = m_pDevice;
 	return true;
-}
-
-/*! =====================================================================================
-@brief	描画要求受付前処理（描画用キュー,RTV,DSVなどのバッファクリア）
-@param	void
-@return HRESULT (互換性のため、常にS_OKを返す）
-====================================================================================== */
-HRESULT	RenderSystem::StartReceivingDrawObject() {
-	m_pDevice->GetDC()->Clear();	//RTV・DSVクリア
-	return S_OK;
 }
 
 /*! =====================================================================================
@@ -54,6 +46,8 @@ HRESULT	RenderSystem::StartReceivingDrawObject() {
 @return bool
 ====================================================================================== */
 bool RenderSystem::Render() {
+
+	m_pDevice->GetDC()->UpdateCameraCBuffer();
 
 	m_PreFlowAndQue.Render(m_pDevice->GetDC());
 	m_FlowAndQue.Render(m_pDevice->GetDC());
@@ -101,6 +95,10 @@ Texture* RenderSystem::FindTextureResource(const tstring& name) {
 ====================================================================================== */
 const DX11Device * RenderSystem::GetDevice() {
 	return m_pDevice;
+}
+
+void RenderSystem::SetMainCamera(Camera* _pMainCamera) {
+	m_pDevice->GetDC()->SetMainCamera(_pMainCamera);
 }
 
 
