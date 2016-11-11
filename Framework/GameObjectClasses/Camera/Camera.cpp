@@ -1,19 +1,21 @@
 #include	"Camera.h"
-#include	"../../BaseSystem/Private/RenderSystem/RenderSystem.h"
+//#include	"../../BaseSystem/Private/RenderSystem/RenderSystem.h"
+#include	"../../BaseSystem/Public/Render/Render.h"
 
 /*! =====================================================================================
 @fn		コンストラクタ
 @param	void
 ====================================================================================== */
 Camera::Camera() {
-	m_transform.SetPosition(Vector3(0, 10, -30));
+	m_transform.SetPosition(Vector3(0, 10, -20));
 	m_up = Vector3(0, 1, 0);
 	m_lookAt = Vector3(0, 10, 0);
 	m_aspect = 16.0f / 9.0f;
 	m_fov = 45.0f;
-	m_near = 0.001f;
-	m_far = 2000;
-
+	m_near = 0.01f;
+	m_far = 1000;
+	//RenderSystem::GetDevice()->GetDC()->SetMainCamera(this);
+	Render::SetMainCamera(this);
 }
 
 /*! =====================================================================================
@@ -23,6 +25,7 @@ Camera::Camera() {
 Camera::~Camera() {
 	SafeDelete(m_pCBuffer);
 	SafeDelete(m_pCBufferMemory);
+	Render::SetMainCamera(nullptr);
 }
 
 /*! =====================================================================================
