@@ -208,6 +208,27 @@
     <Filter Include="DemoScene">
       <UniqueIdentifier>{20ca1835-cc4b-4dc6-8cf8-17741d3883a3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\Mesh">
+      <UniqueIdentifier>{9be8777e-7c56-44c8-ac74-65c7c78dc6bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\Utilities\Loader">
+      <UniqueIdentifier>{65d96bd1-9741-4794-969d-824df20d16d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\Vertex">
+      <UniqueIdentifier>{63f47706-9180-4262-b283-441200421826}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\Material">
+      <UniqueIdentifier>{4b70850e-c89b-40f3-b4bf-31dffbb21a49}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\Utilities\Bone">
+      <UniqueIdentifier>{c6826ee0-6d9f-4f2c-91ed-986b2ace355b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\Utilities\Skelton">
+      <UniqueIdentifier>{9af2fb3f-d792-439b-a7a0-4960f7a0864d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\Utilities\IKBone">
+      <UniqueIdentifier>{e4400b42-f88b-436a-9de7-a0e83e5fd44c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\csv\ApplicationData\windowData.csv">
@@ -443,6 +464,66 @@
     <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\RenderSystemNS.h">
       <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem</Filter>
     </ClInclude>
+    <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\Mesh\Mesh.h">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\Mesh\MeshFactory.h">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\Mesh\MeshObject.h">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\Mesh\SkinMesh.h">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\Utilities\Lodaer\VmdLoader.h">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\Utilities\Loader</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\Utilities\Lodaer\MeshLoader.h">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\Utilities\Loader</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\Utilities\Lodaer\PmxLoader.h">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\Utilities\Loader</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\Material\LambertMaterial.h">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\Material</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\Material\MaterialBase.h">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\Material</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\Material\PmxMaterialBase.h">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\Material</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\Utilities\Bone\MmdBone.h">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\Utilities\Bone</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\Utilities\Bone\Bone.h">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\Utilities\Bone</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\Vertex\Vertex.h">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\Vertex</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\Buffer\CBuffer\TransformCBuffer.h">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\Buffer\CBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\Buffer\CBuffer\BoneCBuffer.h">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\Buffer\CBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\Utilities\Skeleton\MMDSkeleton.h">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\Utilities\Skelton</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\Utilities\Skeleton\Skeleton.h">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\Utilities\Skelton</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\Utilities\IKBone\IKBone.h">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\Utilities\IKBone</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\DrawObject\skinmeshobject.h">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\DrawObject</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\DrawObject\GeometryObject.h">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\DrawObject</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Framework\BaseSystem\Private\MainWindow\MainWindowSystem.cpp">
@@ -618,6 +699,54 @@
     </ClCompile>
     <ClCompile Include="Framework\BaseSystem\Public\Render\Render.cpp">
       <Filter>WindowsGameFramework\0_BaseSystem\Public\4_Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\BaseSystem\Private\RenderSystem\Mesh\Mesh.cpp">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\BaseSystem\Private\RenderSystem\Mesh\MeshFactory.cpp">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\BaseSystem\Private\RenderSystem\Mesh\MeshObject.cpp">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\BaseSystem\Private\RenderSystem\Mesh\SkinMesh.cpp">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\BaseSystem\Private\RenderSystem\Utilities\Lodaer\PmxLoader.cpp">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\Utilities\Loader</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\BaseSystem\Private\RenderSystem\Material\LambertMaterial.cpp">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\Material</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\BaseSystem\Private\RenderSystem\Material\MaterialBase.cpp">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\Material</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\BaseSystem\Private\RenderSystem\Material\PmxMaterialBase.cpp">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\Material</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\BaseSystem\Private\RenderSystem\Utilities\Bone\Bone.cpp">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\Utilities\Bone</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\BaseSystem\Private\RenderSystem\Utilities\Bone\MmdBone.cpp">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\Utilities\Bone</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\BaseSystem\Private\RenderSystem\Buffer\CBuffer\TransformCBuffer.cpp">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\Buffer\CBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\BaseSystem\Private\RenderSystem\Buffer\CBuffer\BoneCBuffer.cpp">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\Buffer\CBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\BaseSystem\Private\RenderSystem\Utilities\Skeleton\MMDSkeleton.cpp">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\Utilities\Skelton</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\BaseSystem\Private\RenderSystem\Utilities\Skeleton\Skeleton.cpp">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\Utilities\Skelton</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\BaseSystem\Private\RenderSystem\DrawObject\SkinMeshObject.cpp">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\DrawObject</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\BaseSystem\Private\RenderSystem\DrawObject\GeometryObject.cpp">
+      <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\DrawObject</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
