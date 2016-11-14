@@ -195,8 +195,7 @@ void WindowsGame::UpdateScene() {
 @return void
 ====================================================================================== */
 void WindowsGame::Render() {
-	
-		m_sceneManager.SendDrawObject();	//描画キュー更新
-		m_renderSystem.Render();			//描画キュー処理
-	
+	m_sceneManager.SendDrawObject();	//描画キュー更新
+	m_renderSystem.Render();			//描画キュー処理
+
 }
