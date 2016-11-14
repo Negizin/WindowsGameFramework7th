@@ -13,15 +13,16 @@ class GameObject;
 class Component {
 public:
 	Component();
+	Component(GameObject* const _pParent);
 	virtual	~Component();
-	virtual	void	Update() {}
+	virtual	void	Update() = 0;
 
 	/*! =====================================================================================
-	@brief	ゲームオブジェクトとこのコンポーネントを関連付け・アタッチする
+	@brief	ゲームオブジェクトにこのコンポーネントを関連付け・アタッチする
 	@param	GameObject*
 	@return void
 	====================================================================================== */
-	void	Attach(GameObject* const _dest);
+	void	Attach(GameObject* const _parent);
 
 	/*! =====================================================================================
 	@brief	このコンポーネントがアタッチしているゲームオブジェクトへのポインタを取得
