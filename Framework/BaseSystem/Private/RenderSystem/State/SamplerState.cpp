@@ -5,6 +5,7 @@ SamplerState::SamplerState(const tstring& name) {
 }
 
 SamplerState::~SamplerState() {
+	
 }
 
 ID3D11SamplerState* SamplerState::GetSamplerState()const {
