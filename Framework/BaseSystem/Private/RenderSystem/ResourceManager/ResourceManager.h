@@ -23,6 +23,7 @@ class ResourceManager
 {
 public:
 	static bool Initialize(DX11Device * pDev);
+	static bool Initialize();
 
 	template<typename T>
 	static bool RegisterResource(T* pObject, const tstring &name);

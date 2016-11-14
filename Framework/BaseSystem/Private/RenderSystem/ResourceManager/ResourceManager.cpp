@@ -1,5 +1,6 @@
 #include	"ResourceManager.h"
 #include	"../DX11Device/DX11Device.h"
+#include	"../RenderSystem.h"
 
 #define ASSIGN_INTERFACE(T,Name)\
  std::unordered_map<HASH,T*> ResourceManager::Name;\
@@ -110,6 +111,17 @@ bool ResourceManager::Initialize(DX11Device* pDev)
 	m_pDevice = pDev;
 	InitializeSampler(pDev);
 
+	return true;
+}
+
+/*! =====================================================================================
+@brief	èâä˙âª
+@param	void
+@return bool
+====================================================================================== */
+bool ResourceManager::Initialize() {
+	m_pDevice = RenderSystem::GetDevice();
+	InitializeSampler(m_pDevice);
 	return true;
 }
 
