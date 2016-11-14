@@ -123,7 +123,7 @@ HRESULT	MainWindowSystem::Initialize(HINSTANCE hInstance) {
 	m_hdc = GetDC(m_hWnd);
 
 	//マウスポインタ表示非表示
-	ShowCursor(false);
+	ShowCursor(true);
 
 	m_bInitialized = true;
 	return	S_OK;
