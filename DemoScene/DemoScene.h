@@ -17,7 +17,6 @@ public:
 
 	void		Initialize();
 	BaseScene*	Update();
-	void		UpdateRenderer();
 
 private:
 	Camera*	m_pCamera;
