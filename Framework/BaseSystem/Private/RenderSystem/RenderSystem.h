@@ -58,19 +58,16 @@ public:
 
 
 
-	bool	SetDrawQue(DrawQueue* pDrawQue, TARGET_FLOW = TARGET_FLOW::DEFAULT_RENDERER);
-	bool	SetShaderFlow(RenderFlow* pFlow, TARGET_FLOW = TARGET_FLOW::DEFAULT_RENDERER);
-	bool	LoadShaderResourceFromXML(DX11Device* pDev, const tstring&name);
-	bool	LoadRenderSystemFromXML(DX11Device* pDev, const tstring&name);
+	static bool	SetDrawQue(DrawQueue* pDrawQue, TARGET_FLOW = TARGET_FLOW::DEFAULT_RENDERER);
+	static bool	SetShaderFlow(RenderFlow* pFlow, TARGET_FLOW = TARGET_FLOW::DEFAULT_RENDERER);
+	static bool	LoadShaderResourceFromXML(DX11Device* pDev, const tstring&name);
+	static bool	LoadRenderSystemFromXML(DX11Device* pDev, const tstring&name);
+	static bool	LoadRenderSystemFromXML(const tstring& name);
 
 	Texture*	FindTextureResource(const tstring & name);
 
-	
-	static const DX11Device*	GetDevice();
 
-
-	/*	 川上追記	将来的にPublicなRenderに移行・実装したい関数群　*/
-	void	SetMainCamera(Camera* _pMainCamera);
+	static  DX11Device*	GetDevice();
 
 protected:
 	//デバイス
@@ -79,12 +76,12 @@ protected:
 	//レンダリング・システムリソース
 
 	//std::vector<TsLight*>		m_lights;
-	std::vector<Texture*>		m_shaderResourceList;
-	std::vector<DrawQueue*>		m_drawque;
+	static std::vector<Texture*>		m_shaderResourceList;
+	static std::vector<DrawQueue*>		m_drawque;
 
-	FlowAndQue m_PreFlowAndQue;		//shadow生成
-	FlowAndQue m_FlowAndQue;		//GBuffer生成
+	static FlowAndQue m_PreFlowAndQue;		//shadow生成
+	static FlowAndQue m_FlowAndQue;		//GBuffer生成
 	//パーティクル
 	//UI
-	FlowAndQue m_PostFlowAndQue;	//PostEffect生成
+	static FlowAndQue m_PostFlowAndQue;	//PostEffect生成
 };

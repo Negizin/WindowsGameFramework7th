@@ -9,6 +9,12 @@
 #include	"RenderSystemNS.h"
 
 DX11Device*	RenderSystem::m_pDevice = nullptr;
+std::vector<Texture*>		RenderSystem::m_shaderResourceList;
+std::vector<DrawQueue*>		RenderSystem::m_drawque;
+RenderSystem::FlowAndQue	RenderSystem::m_PreFlowAndQue;
+RenderSystem::FlowAndQue	RenderSystem::m_FlowAndQue;
+RenderSystem::FlowAndQue	RenderSystem::m_PostFlowAndQue;
+
 
 /*! =====================================================================================
 @brief	コンストラクタ
@@ -93,15 +99,9 @@ Texture* RenderSystem::FindTextureResource(const tstring& name) {
 @param	void
 @return void
 ====================================================================================== */
-const DX11Device * RenderSystem::GetDevice() {
+DX11Device * RenderSystem::GetDevice() {
 	return m_pDevice;
 }
-
-void RenderSystem::SetMainCamera(Camera* _pMainCamera) {
-	m_pDevice->GetDC()->SetMainCamera(_pMainCamera);
-}
-
-
 
 
 bool RenderSystem::LoadRenderSystemFromXML(DX11Device* pDev, const tstring&name) {
@@ -151,6 +151,16 @@ bool RenderSystem::LoadRenderSystemFromXML(DX11Device* pDev, const tstring&name)
 	}
 	return true;
 }
+
+/*! =====================================================================================
+@brief	レンダーシステム読み込み
+@param	filename
+@return bool
+====================================================================================== */
+bool RenderSystem::LoadRenderSystemFromXML(const tstring & name) {
+	return LoadRenderSystemFromXML(m_pDevice, name);
+}
+
 bool RenderSystem::LoadShaderResourceFromXML(DX11Device* pDev, const tstring& name) {
 	XML xml;
 	xml.LoadXML(UT::Resource::GetShaderResourceDirectory() + name);
