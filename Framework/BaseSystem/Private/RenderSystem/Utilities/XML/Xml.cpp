@@ -176,7 +176,7 @@ bool MyXMLAttribute::GetBoolValue() {
 MyXMLElement::MyXMLElement() :
 	m_element(nullptr),
 	m_firstChild(nullptr),
-	m_parent(nullptr),
+	m_pParent(nullptr),
 	m_subling(nullptr) {
 	m_attributeList.reserve(32);
 };
@@ -228,7 +228,8 @@ bool MyXMLElement::SetElement(tinyxml2::XMLElement* elm) {
 
 #ifdef UNICODE
 	m_name = StringToWString(elm->Name());
-	m_data = StringToWString(elm->GetText()) != _T("nullptr") ? StringToWString(elm->GetText()) : _T("");
+	std::string _work = elm->GetText() != nullptr ? elm->GetText() : "";
+	m_data = StringToWString(_work);
 #else
 	m_name = elm->Name();
 	m_data = elm->GetText() != nullptr ? elm->GetText() : "";
@@ -345,7 +346,7 @@ bool XML::LoadXML(const tstring& filename) {
 		if (child != nullptr) {
 			tselm->m_firstChild = new MyXMLElement;
 			tselm->m_firstChild->SetElement(child);
-			tselm->m_firstChild->m_parent = tselm;
+			tselm->m_firstChild->m_pParent = tselm;
 			CreateTree(tselm->m_firstChild);
 		}
 

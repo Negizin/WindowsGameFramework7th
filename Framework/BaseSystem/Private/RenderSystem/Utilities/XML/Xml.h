@@ -75,7 +75,7 @@ private:
 	tstring m_data;							//! エレメントが所持するテキストデータ
 	std::vector<MyXMLAttribute*> m_attributeList;	//! アトリビュートのリスト
 
-	MyXMLElement*		  m_parent;				//! 親エレメント
+	MyXMLElement*		  m_pParent;				//! 親エレメント
 	MyXMLElement*		  m_subling;			//! 兄弟エレメント
 	MyXMLElement*		  m_firstChild;			//! 第一子エレメント
 
