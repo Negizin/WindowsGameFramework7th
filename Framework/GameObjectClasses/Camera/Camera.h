@@ -13,18 +13,10 @@ public:
 	Camera();
 	virtual ~Camera();
 	static const int MainCameraCbufferRegisterIndex = 7;
-	
+
 	//
-	bool Initialize(const Vector3& _eyePos, const Vector3& _up, const Vector3& _lookAt,float aspect, float fov, float _near, float _far);
+	bool Initialize(const Vector3& _eyePos, const Vector3& _up, const Vector3& _lookAt, float aspect, float fov, float _near, float _far);
 	void Update();
-
-	bool UpdateForCBuffer();
-
-
-	//
-	Matrix	GetProjectionMatrix()const;
-	Matrix	GetViewMatrix()const;
-	Matrix	GetViewProjMatrix()const;
 
 	struct ViewCBuffer {
 		Matrix	m_viewMatrix;
@@ -41,6 +33,14 @@ public:
 		float	m_fov;
 		float	m_dumy;
 	};
+	//CBuffer*		GetCBuffer()const;
+	//ViewCBuffer*	GetViewCBuffer()const;
+	bool	CreateCBuffer();
+	bool	UpdateForCBuffer();
+	//
+	Matrix	GetProjectionMatrix()const;
+	Matrix	GetViewMatrix()const;
+	Matrix	GetViewProjMatrix()const;
 
 protected:
 	Vector3	m_lookAt;

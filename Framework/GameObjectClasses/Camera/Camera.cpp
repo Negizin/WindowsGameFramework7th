@@ -1,6 +1,7 @@
 #include	"Camera.h"
-//#include	"../../BaseSystem/Private/RenderSystem/RenderSystem.h"
+#include	"../../BaseSystem/Private/RenderSystem/RenderSystem.h"
 #include	"../../BaseSystem/Public/Render/Render.h"
+#include	"../../BaseSystem/Private/RenderSystem/Buffer/CBuffer/CBuffer.h"
 
 /*! =====================================================================================
 @fn		コンストラクタ
@@ -16,6 +17,9 @@ Camera::Camera() {
 	m_far = 1000;
 	//RenderSystem::GetDevice()->GetDC()->SetMainCamera(this);
 	Render::SetMainCamera(this);
+	m_pCBuffer = nullptr;
+	m_pCBufferMemory = nullptr;
+	CreateCBuffer();
 }
 
 /*! =====================================================================================
@@ -51,6 +55,19 @@ bool Camera::Initialize(const Vector3& _eyePos, const Vector3& _up, const Vector
 void Camera::Update() {
 }
 
+
+bool Camera::CreateCBuffer() {
+	m_pCBufferMemory = new ViewCBuffer;
+	UpdateForCBuffer();
+	m_pCBuffer = new CBuffer();
+	m_pCBuffer->CreateCBuffer(m_pCBufferMemory, sizeof(ViewCBuffer));
+	if (m_pCBuffer == nullptr)
+		return false;
+	m_pCBuffer->SetRegisterIndex(MainCameraCbufferRegisterIndex);
+	m_pCBuffer->BindShaderType(SHADER_TYPE::VP_SHADER);
+	return true;
+}
+
 /*! =====================================================================================
 @brief	CBuffer更新
 @param	void
@@ -83,6 +100,14 @@ bool Camera::UpdateForCBuffer() {
 	}
 	return true;
 }
+
+//CBuffer * Camera::GetCBuffer() const {
+//	return nullptr;
+//}
+//
+//Camera::ViewCBuffer * Camera::GetViewCBuffer() const {
+//	return nullptr;
+//}
 
 /*! =====================================================================================
 @brief	プロジェクション行列
