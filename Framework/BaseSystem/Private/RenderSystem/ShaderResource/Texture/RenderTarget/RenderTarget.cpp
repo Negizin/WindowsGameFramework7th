@@ -70,12 +70,17 @@ RenderTarget* RenderTarget::CrateScreenRTV(DX11Device& dev) {
 
 	// バックバッファへのポインタを指定してRTVを作成
 	hr = pDev->CreateRenderTargetView(pBackBuffer, NULL, &pD3Drtv);
-	SafeRelease(pBackBuffer);
+	//SafeRelease(pBackBuffer);
+	D3D11_TEXTURE2D_DESC desc;
+	pBackBuffer->GetDesc(&desc);
 
 	//RTV_CREATE_ERR_TO_RETURN;
 	RenderTarget* rtv = new RenderTarget();
 	rtv->SetName(_T("ScreenRenderTargetView"));
 	rtv->m_rtv = pD3Drtv;
+
+	rtv->m_rtvSize[0] = desc.Width;
+
 	//AddObject(rtv);
 
 	return rtv;
