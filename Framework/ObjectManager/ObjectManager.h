@@ -19,7 +19,7 @@ public:
 	@param	GameObject*
 	@return void
 	====================================================================================== */
-	void	RegisterObject(GameObject*	setObject);
+	void	RegisterObject(GameObject*	_pObject);
 
 	/*! =====================================================================================
 	@brief	指定したスレッド・オブジェクト配列にゲームオブジェクトを登録する
@@ -27,7 +27,7 @@ public:
 	@param	unsigned	登録先のスレッド・オブジェクト配列のインデックス(0～3)
 	@return void
 	====================================================================================== */
-	void	RegisterObject(GameObject*	setObject, unsigned thread);
+	void	RegisterObject(GameObject*	_pObject, unsigned _threadIndex);
 
 	void	Update();			//更新処理
 	void	RendererUpdate();	//描画用キューに有効なｵﾌﾞｼﾞｪｸﾄをセット

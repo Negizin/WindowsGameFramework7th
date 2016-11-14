@@ -28,10 +28,11 @@ ObjectManager::~ObjectManager() {
 @param	GameObject*
 @return void
 ====================================================================================== */
-void	ObjectManager::RegisterObject(GameObject* setObject) {
-	m_objectArray[0].push_back(setObject);
-	if (setObject->GetComponentCollider() != nullptr) {
-	
+void	ObjectManager::RegisterObject(GameObject* _pObject) {
+	m_objectArray[0].push_back(_pObject);
+	ColliderList* _pColliderList = _pObject->GetComponentColliderList();
+	for (auto itr = _pColliderList->begin(); itr != _pColliderList->end(); itr++) {
+
 	}
 }
 
@@ -41,15 +42,16 @@ void	ObjectManager::RegisterObject(GameObject* setObject) {
 @param	unsigned	登録先のスレッド・オブジェクト配列のインデックス(0～3)
 @return void
 ====================================================================================== */
-void ObjectManager::RegisterObject(GameObject * setObject, unsigned thread) {
+void ObjectManager::RegisterObject(GameObject * _pObject, unsigned thread) {
 	switch (thread) {
-		case	0:	m_objectArray[0].push_back(setObject); return;
-		case	1:	m_objectArray[1].push_back(setObject); return;
-		case	2:	m_objectArray[2].push_back(setObject); return;
-		case	3:	m_objectArray[3].push_back(setObject); return;
-		default:	m_objectArray[0].push_back(setObject); return;
+		case	0:	m_objectArray[0].push_back(_pObject); return;
+		case	1:	m_objectArray[1].push_back(_pObject); return;
+		case	2:	m_objectArray[2].push_back(_pObject); return;
+		case	3:	m_objectArray[3].push_back(_pObject); return;
+		default:	m_objectArray[0].push_back(_pObject); return;
 	}
-	if (setObject->GetComponentCollider() != nullptr) {
+	ColliderList* _pColliderList = _pObject->GetComponentColliderList();
+	for (auto itr = _pColliderList->begin(); itr != _pColliderList->end(); itr++) {
 
 	}
 }
