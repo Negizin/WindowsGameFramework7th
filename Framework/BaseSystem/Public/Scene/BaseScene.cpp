@@ -1,5 +1,6 @@
 #include	"BaseScene.h"
 #include	"../../../GameObjectClasses/2D/FadeSprite.h"
+#include	"../../Private/RenderSystem/SystemResource/DrawQueue.h"
 
 /*! =====================================================================================
 @brief	コンストラクタ	
@@ -13,6 +14,8 @@ BaseScene::BaseScene() {
 	m_pFadeSprite = new FadeSprite();
 	m_objectManager.RegisterObject(m_pFadeSprite);
 	m_nextSceneID = 0;
+
+	m_pQueue = new DrawQueue();
 }
 
 /*! =====================================================================================
@@ -20,6 +23,7 @@ BaseScene::BaseScene() {
 @param	void
 ====================================================================================== */
 BaseScene::~BaseScene() {
+	SafeDelete(m_pQueue);
 }
 
 /*! =====================================================================================

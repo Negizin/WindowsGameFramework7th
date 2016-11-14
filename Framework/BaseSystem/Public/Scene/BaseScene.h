@@ -15,6 +15,7 @@
 #pragma once
 #include	"../../../ObjectManager/ObjectManager.h"
 #include	"../../../GameObjectClasses/2D/FadeSprite.h"
+class DrawQueue;
 
 class BaseScene {
 public:
@@ -31,5 +32,8 @@ protected:
 	FadeSprite*		m_pFadeSprite;		//フェードに使用するスプライトオブジェクト
 	int				m_nextSceneID;		//シーン遷移ID
 	virtual	bool	CheckSceneTransition();	
+
+	DrawQueue*	m_pQueue;	//描画用キュー
+
 };
 
