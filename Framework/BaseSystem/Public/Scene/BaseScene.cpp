@@ -3,7 +3,7 @@
 #include	"../../Private/RenderSystem/SystemResource/DrawQueue.h"
 
 /*! =====================================================================================
-@brief	コンストラクタ	
+@brief	コンストラクタ
 
 	!! コンストラクタは継承先でも最低限の処理に抑えてください。
 	!! ロードにコストを要するものは並列処理されるInitialize()に実装するようにしてください。
@@ -40,7 +40,7 @@ BaseScene * BaseScene::Update() {
 	if (CheckSceneTransition() == true) {
 		m_pFadeSprite->StartFadeOut();	//フェードアウト開始
 	}
-	
+
 	//シーン遷移中
 	if (m_nextSceneID != 0) {
 		//フェードアウトが完了
@@ -54,10 +54,7 @@ BaseScene * BaseScene::Update() {
 			}
 		}
 	}
-	else {
-		//シーン遷移なし
-		return	this;
-	}
+	return	this;	//シーン遷移なし
 }
 
 
@@ -89,7 +86,7 @@ bool BaseScene::CheckSceneTransition() {
 		m_nextSceneID = 1;
 		return true;
 	}
-	else if(false){
+	else if (false) {
 		m_nextSceneID = 2;
 		return true;
 	}

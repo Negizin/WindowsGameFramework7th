@@ -47,7 +47,7 @@ void LoadScene::Initialize(BaseScene * _pNextScene) {
 /*! =====================================================================================
 @brief	更新処理
 @param	void
-@return void
+@return BaseScene*：遷移先シーンのポインタ（遷移なし＝thisポインタを返す）
 ====================================================================================== */
 BaseScene * LoadScene::Update() {
 
@@ -66,9 +66,7 @@ BaseScene * LoadScene::Update() {
 			return m_pNextScene;	//遷移先シーンのポインタを返す
 		}
 	}
-	else {
-		return	this;	//シーン遷移なし
-	}
+	return this;	//遷移なし
 }
 
 /*! =====================================================================================
