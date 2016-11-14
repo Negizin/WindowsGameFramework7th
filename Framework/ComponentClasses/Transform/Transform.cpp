@@ -1,4 +1,6 @@
 #include "Transform.h"
+#include <stack>
+
 
 /*! =====================================================================================
 @fn		コンストラクタ
@@ -141,7 +143,7 @@ const GameObject * Transform::GetGameObject() const {
 @param	void
 @return const Transform*
 ====================================================================================== */
-const Transform * Transform::GetParentTransform() const {
+Transform * Transform::GetParentTransform() const {
 	return nullptr;
 }
 
@@ -150,8 +152,23 @@ const Transform * Transform::GetParentTransform() const {
 @param	void
 @return Matrix
 ====================================================================================== */
-Matrix Transform::ToWorldMatrix() const {
-	return Matrix();
+Matrix Transform::ToWorldMatrix() {
+	Matrix result;
+	Transform* temp = this;
+	std::stack<Matrix> matStack;
+	//親を辿ってローカル行列をスタックに格納する
+	do {
+		matStack.push(temp->ToLocalMatrix());
+		temp = temp->GetParentTransform();
+	} while (temp != nullptr);
+
+	//スタックからローカル行列を取り出しワールド行列を計算する
+	while (matStack.empty() == false) {
+		result *= matStack.top();
+		matStack.pop();
+	}
+
+	return result;
 }
 
 /*! =====================================================================================

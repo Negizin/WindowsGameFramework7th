@@ -31,9 +31,9 @@ public:
 	//
 	const	tstring&	GetName()const;
 	const	GameObject*	GetGameObject()const;
-	const	Transform*	GetParentTransform()const;
+	Transform*	GetParentTransform()const;
 	//
-	Matrix	ToWorldMatrix()const;
+	Matrix	ToWorldMatrix();
 	Matrix	ToLocalMatrix()const;
 	//
 	void	SetGameObject(GameObject* _pObject);
@@ -51,8 +51,8 @@ private:
 	//
 	tstring		m_name;
 	Transform*	m_pParent = nullptr;
-	//TransForm*	m_pFirstChild = nullptr;
-	//TransForm*	m_pSubling = nullptr;
+	Transform*	m_pFirstChild = nullptr;
+	Transform*	m_pSubling = nullptr;
 
 };
 
