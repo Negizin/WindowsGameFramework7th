@@ -100,15 +100,6 @@
     <Filter Include="WindowsGameFramework\3_ComponentClasses\Renderer\Sprite">
       <UniqueIdentifier>{1bbe1715-4ac0-4500-b5f1-fd7857080bcd}</UniqueIdentifier>
     </Filter>
-    <Filter Include="WindowsGameFramework\9_Utilities">
-      <UniqueIdentifier>{0dbc7df2-5174-4197-9e49-f4cbe8a70e23}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="WindowsGameFramework\9_Utilities\Math">
-      <UniqueIdentifier>{7bc8d5f2-6d7f-4d42-a4c9-cc2cea722cd8}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="WindowsGameFramework\9_Utilities\Random">
-      <UniqueIdentifier>{1ab040fd-436a-48d4-9b24-87aa2bd5be68}</UniqueIdentifier>
-    </Filter>
     <Filter Include="WindowsGameFramework\0_BaseSystem\Private\8_Debug">
       <UniqueIdentifier>{2055a90b-d07d-43dd-b7e5-cbfaf2a09256}</UniqueIdentifier>
     </Filter>
@@ -187,15 +178,6 @@
     <Filter Include="WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\DrawObject">
       <UniqueIdentifier>{94600952-b728-4570-b572-109cd98d8f7f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="WindowsGameFramework\9_Utilities\Math\Vector">
-      <UniqueIdentifier>{4fd3f37e-34c9-4454-aca1-e42d28ac451f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="WindowsGameFramework\9_Utilities\Math\Matrix">
-      <UniqueIdentifier>{87621e45-5049-4df3-acd5-fec8de3dc0ac}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="WindowsGameFramework\9_Utilities\Math\Quaternion">
-      <UniqueIdentifier>{db05492b-8401-4b33-8102-4f52e71922c4}</UniqueIdentifier>
-    </Filter>
     <Filter Include="WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\Utilities\XML\tiny">
       <UniqueIdentifier>{3dfc8081-6609-4729-91e2-7d4810f006a0}</UniqueIdentifier>
     </Filter>
@@ -228,6 +210,30 @@
     </Filter>
     <Filter Include="WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\Utilities\IKBone">
       <UniqueIdentifier>{e4400b42-f88b-436a-9de7-a0e83e5fd44c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WindowsGameFramework\8_Utilities">
+      <UniqueIdentifier>{0dbc7df2-5174-4197-9e49-f4cbe8a70e23}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WindowsGameFramework\8_Utilities\Math">
+      <UniqueIdentifier>{7bc8d5f2-6d7f-4d42-a4c9-cc2cea722cd8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WindowsGameFramework\8_Utilities\Math\Vector">
+      <UniqueIdentifier>{4fd3f37e-34c9-4454-aca1-e42d28ac451f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WindowsGameFramework\8_Utilities\Math\Matrix">
+      <UniqueIdentifier>{87621e45-5049-4df3-acd5-fec8de3dc0ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WindowsGameFramework\8_Utilities\Math\Quaternion">
+      <UniqueIdentifier>{db05492b-8401-4b33-8102-4f52e71922c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WindowsGameFramework\8_Utilities\Random">
+      <UniqueIdentifier>{1ab040fd-436a-48d4-9b24-87aa2bd5be68}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WindowsGameFramework\9_GameProperty">
+      <UniqueIdentifier>{dfa66c4a-aeee-4831-91a8-4cf15f48b892}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WindowsGameFramework\9_GameProperty\ColliderID">
+      <UniqueIdentifier>{914ad3ea-bd8e-457d-bb33-3444758c834f}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -327,10 +333,10 @@
       <Filter>WindowsGameFramework\2_GameObjectClasses\2D</Filter>
     </ClInclude>
     <ClInclude Include="Framework\Utilities\Math\Math.h">
-      <Filter>WindowsGameFramework\9_Utilities\Math</Filter>
+      <Filter>WindowsGameFramework\8_Utilities\Math</Filter>
     </ClInclude>
     <ClInclude Include="Framework\Utilities\Random\Random.h">
-      <Filter>WindowsGameFramework\9_Utilities\Random</Filter>
+      <Filter>WindowsGameFramework\8_Utilities\Random</Filter>
     </ClInclude>
     <ClInclude Include="Framework\BaseSystem\Private\Scene\LoadScene.h">
       <Filter>WindowsGameFramework\0_BaseSystem\Private\7_Scene</Filter>
@@ -441,13 +447,13 @@
       <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\DrawObject</Filter>
     </ClInclude>
     <ClInclude Include="Framework\Utilities\Math\Vector\Vector.h">
-      <Filter>WindowsGameFramework\9_Utilities\Math\Vector</Filter>
+      <Filter>WindowsGameFramework\8_Utilities\Math\Vector</Filter>
     </ClInclude>
     <ClInclude Include="Framework\Utilities\Math\Matrix\Matrix.h">
-      <Filter>WindowsGameFramework\9_Utilities\Math\Matrix</Filter>
+      <Filter>WindowsGameFramework\8_Utilities\Math\Matrix</Filter>
     </ClInclude>
     <ClInclude Include="Framework\Utilities\Math\Quaternion\Quaternion.h">
-      <Filter>WindowsGameFramework\9_Utilities\Math\Quaternion</Filter>
+      <Filter>WindowsGameFramework\8_Utilities\Math\Quaternion</Filter>
     </ClInclude>
     <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\Utilities\XML\tiny\tinyxml2.h">
       <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\Utilities\XML\tiny</Filter>
@@ -524,6 +530,9 @@
     <ClInclude Include="Framework\BaseSystem\Private\RenderSystem\DrawObject\GeometryObject.h">
       <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\DrawObject</Filter>
     </ClInclude>
+    <ClInclude Include="Framework\GameProperty\ColliderID.h">
+      <Filter>WindowsGameFramework\9_GameProperty\ColliderID</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Framework\BaseSystem\Private\MainWindow\MainWindowSystem.cpp">
@@ -587,7 +596,7 @@
       <Filter>WindowsGameFramework\2_GameObjectClasses\2D</Filter>
     </ClCompile>
     <ClCompile Include="Framework\Utilities\Random\Random.cpp">
-      <Filter>WindowsGameFramework\9_Utilities\Random</Filter>
+      <Filter>WindowsGameFramework\8_Utilities\Random</Filter>
     </ClCompile>
     <ClCompile Include="Framework\BaseSystem\Private\Scene\LoadScene.cpp">
       <Filter>WindowsGameFramework\0_BaseSystem\Private\7_Scene</Filter>
@@ -671,19 +680,19 @@
       <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\DrawObject</Filter>
     </ClCompile>
     <ClCompile Include="Framework\Utilities\Math\Vector\Vector2.cpp">
-      <Filter>WindowsGameFramework\9_Utilities\Math\Vector</Filter>
+      <Filter>WindowsGameFramework\8_Utilities\Math\Vector</Filter>
     </ClCompile>
     <ClCompile Include="Framework\Utilities\Math\Vector\Vector3.cpp">
-      <Filter>WindowsGameFramework\9_Utilities\Math\Vector</Filter>
+      <Filter>WindowsGameFramework\8_Utilities\Math\Vector</Filter>
     </ClCompile>
     <ClCompile Include="Framework\Utilities\Math\Vector\Vector4.cpp">
-      <Filter>WindowsGameFramework\9_Utilities\Math\Vector</Filter>
+      <Filter>WindowsGameFramework\8_Utilities\Math\Vector</Filter>
     </ClCompile>
     <ClCompile Include="Framework\Utilities\Math\Matrix\Matrix.cpp">
-      <Filter>WindowsGameFramework\9_Utilities\Math\Matrix</Filter>
+      <Filter>WindowsGameFramework\8_Utilities\Math\Matrix</Filter>
     </ClCompile>
     <ClCompile Include="Framework\Utilities\Math\Quaternion\Quaternion.cpp">
-      <Filter>WindowsGameFramework\9_Utilities\Math\Quaternion</Filter>
+      <Filter>WindowsGameFramework\8_Utilities\Math\Quaternion</Filter>
     </ClCompile>
     <ClCompile Include="Framework\BaseSystem\Private\RenderSystem\Utilities\XML\tiny\tinyxml2.cpp">
       <Filter>WindowsGameFramework\0_BaseSystem\Private\4_RenderSystem\Utilities\XML\tiny</Filter>

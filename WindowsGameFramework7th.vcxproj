@@ -241,6 +241,7 @@
     <ClInclude Include="Framework\GameObjectClasses\2D\Sprite2D.h" />
     <ClInclude Include="Framework\GameObjectClasses\Camera\Camera.h" />
     <ClInclude Include="Framework\GameObjectClasses\GameObject.h" />
+    <ClInclude Include="Framework\GameProperty\ColliderID.h" />
     <ClInclude Include="Framework\ObjectManager\ObjectManager.h" />
     <ClInclude Include="Framework\Utilities\Math\Math.h" />
     <ClInclude Include="Framework\Utilities\Math\Matrix\Matrix.h" />
