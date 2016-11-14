@@ -38,6 +38,8 @@ public:
 	bool CreateCBuffer(__in DX11Device *dev,
 		__in void * pData,
 		__in size_t size);
+
+	bool CreateCBuffer(__in void * pData, __in size_t size);
 private:
 	SHADER_TYPE m_bindShaderType;
 };

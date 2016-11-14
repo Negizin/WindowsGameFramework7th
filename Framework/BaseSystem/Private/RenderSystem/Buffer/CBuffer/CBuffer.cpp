@@ -1,4 +1,5 @@
 #include "CBuffer.h"
+#include "../../RenderSystem.h"
 
 //! Constructor
 CBuffer::CBuffer()
@@ -22,4 +23,8 @@ bool CBuffer::CreateCBuffer(
 	SetBufferSize(size);
 
 	return hr;
+}
+
+bool CBuffer::CreateCBuffer(void * pData, size_t size) {
+	return CreateCBuffer(RenderSystem::GetDevice(), pData, size);
 }
