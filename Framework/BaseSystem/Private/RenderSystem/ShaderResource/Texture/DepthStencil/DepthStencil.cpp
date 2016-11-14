@@ -23,13 +23,7 @@ bool DepthStencil::Create(DX11Device& dev,
 		//DEPTH_STENCIL_CREATE_ERR_TO_RETURN;
 	}
 
-	// step 2 create depth stencil state
-	{
-		DEPTH_STENCIL_DESC desc;
-		HRESULT hr = pDev->CreateDepthStencilState(&desc, &m_depthStencil);
-		//DEPTH_STENCIL_CREATE_ERR_TO_RETURN;
-	}
-
+	
 	// step 3 create view
 	{	//todo 
 		D3D11_DEPTH_STENCIL_VIEW_DESC desc;
