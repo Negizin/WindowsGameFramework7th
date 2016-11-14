@@ -7,8 +7,7 @@
 @param	void
 ====================================================================================== */
 GameObject::GameObject() :
-	m_isActive(true), m_pCollider(nullptr), m_pRenderer(nullptr) {
-	m_transform.Attach(this);
+	m_isActive(true), m_transform(this), m_pRenderer(nullptr) {
 }
 
 /*! =====================================================================================
@@ -16,7 +15,6 @@ GameObject::GameObject() :
 @param	void
 ====================================================================================== */
 GameObject::~GameObject() {
-	SafeDelete(m_pCollider);
 	SafeDelete(m_pRenderer);
 }
 
@@ -30,7 +28,9 @@ GameObject::~GameObject() {
 @return void
 ====================================================================================== */
 void	GameObject::OnCollision(Collider*	_pOther) {
-
+	//switch (_pOther->GetColliderID()) {
+	//	default:	break;
+	//}
 }
 
 /*! =====================================================================================
@@ -39,7 +39,7 @@ void	GameObject::OnCollision(Collider*	_pOther) {
 ====================================================================================== */
 void GameObject::Activate(bool _flg) {
 	m_isActive = _flg;
-	if (m_pCollider != nullptr) { m_pCollider->Activate(_flg); }
+	m_colliderList.Activate(_flg);
 	if (m_pRenderer != nullptr) { m_pRenderer->Activate(_flg); }
 }
 
@@ -48,7 +48,7 @@ void GameObject::Activate(bool _flg) {
 @param	bool：true＝衝突ON
 ====================================================================================== */
 void GameObject::ActivateCollider(bool _flg) {
-	if (m_pCollider != nullptr) { m_pCollider->Activate(_flg); }
+	m_colliderList.Activate(_flg);
 }
 
 /*! =====================================================================================
@@ -71,8 +71,8 @@ bool GameObject::GetActiveFlg() const {
 @brief	オブジェクトのコライダーを取得
 @param	bool：true＝更新ON
 ====================================================================================== */
-Collider*	GameObject::GetComponentCollider() const {
-	return m_pCollider;
+ColliderList*	GameObject::GetComponentColliderList() {
+	return &m_colliderList;
 }
 
 /*! =====================================================================================

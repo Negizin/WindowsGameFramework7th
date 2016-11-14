@@ -10,8 +10,8 @@
 #include	"../BaseSystem/Public/Timer/Timer.h"		//タイマーインターフェースの使用
 #include	"../Utilities/Math/Math.h"					//数学系ユーティリティの使用
 #include	"../ComponentClasses/Transform/Transform.h"	//トランスフォームコンポーネント
-//
-class Collider;
+#include	"../ComponentClasses/Collider/Collider.h"	//コライダーコンポーネント
+
 class Renderer;
 
 class GameObject {
@@ -20,15 +20,15 @@ public:
 	virtual ~GameObject();
 
 	/*! =====================================================================================
-	@brief	更新処理	
-	
+	@brief	更新処理
+
 		m_isActiveフラグがtrueのとき、毎フレーム呼び出される関数。
 
 	====================================================================================== */
 	virtual	void	Update() = 0;
 	/*! =====================================================================================
-	@brief	衝突処理	
-	
+	@brief	衝突処理
+
 		「m_isActive が true」かつ「m_pCollider が nullptrでない」場合、衝突判定が行われる。
 		衝突判定により衝突が検知された場合、この関数が呼び出される。
 
@@ -58,10 +58,10 @@ public:
 	====================================================================================== */
 	bool		GetActiveFlg() const;
 	/*! =====================================================================================
-	@brief	オブジェクトのコライダーを取得
+	@brief	オブジェクトのコライダーリストを取得
 	@param	bool：true＝更新ON
 	====================================================================================== */
-	Collider*	GetComponentCollider() const;
+	ColliderList*	GetComponentColliderList();
 	/*! =====================================================================================
 	@brief	オブジェクトのレンダラーを取得
 	@param	bool：true＝更新ON
@@ -71,6 +71,6 @@ public:
 protected:
 	bool		m_isActive;		//オブジェクトの処理を行う：true
 	Transform	m_transform;	//トランスフォーム：[拡縮/回転/移動]変換用コンポーネント
-	Collider*	m_pCollider;	//コライダー：衝突用コンポーネント（衝突なし＝nullptr）
-	Renderer*	m_pRenderer;	//レンダラー：描画用コンポーネント（描画なし＝nullptr）
+	ColliderList m_colliderList;//コライダーリスト：衝突用コンポーネント(衝突なし:size()==0)
+	Renderer*	m_pRenderer;	//レンダラー：描画用コンポーネント（描画なし:nullptr）
 };
