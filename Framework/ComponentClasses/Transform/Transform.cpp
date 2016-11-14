@@ -12,6 +12,13 @@ Transform::Transform() :
 	m_pParent(nullptr) {
 }
 
+Transform::Transform(GameObject * const _pParent) :
+	m_name(_T("NoName")),
+	m_scale(1.0f, 1.0f, 1.0f),
+	m_pParent(nullptr) {
+	m_pGameObject = _pParent;
+}
+
 /*! =====================================================================================
 @fn		コンストラクタ
 @param	Vector3		position

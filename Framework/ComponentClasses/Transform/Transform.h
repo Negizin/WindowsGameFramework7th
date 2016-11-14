@@ -14,9 +14,11 @@ class GameObject;
 class Transform :public Component {
 public:
 	Transform();
+	Transform(GameObject* const _pParent);
 	Transform(const Vector3& _position, const Quaternion& _rotation, const Vector3& _scale = Vector3::one);
 	Transform(const Matrix& _matrix);
-	virtual ~Transform();	
+	virtual ~Transform();
+	void	Update() {}
 
 	//
 	void	SetPosition(const Vector3& _position);
@@ -47,7 +49,7 @@ private:
 	Vector3		m_scale;
 	Quaternion	m_rotation;
 	Vector3		m_position;
-	
+
 	//
 	tstring		m_name;
 	Transform*	m_pParent = nullptr;
