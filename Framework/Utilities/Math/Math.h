@@ -8,6 +8,10 @@
 #include	<math.h>
 #include	<DirectXMath.h>
 
+#include	"Matrix\Matrix.h"
+#include	"Vector\Vector.h"
+#include	"Quaternion\Quaternion.h"
+
 namespace Math {
 	static	const	float	PI = 3.14159f;
 }
